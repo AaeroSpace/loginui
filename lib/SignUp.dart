@@ -1,20 +1,18 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:loginui/login_page.dart';
 import 'package:loginui/main.dart';
 import 'package:loginui/schedule_page.dart';
 
-import 'ForgotPassword1.dart';
-import 'SignUp.dart';
-
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class SignUp extends StatefulWidget {
+  const SignUp({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,26 +23,40 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             // ignore: prefer_const_literals_to_create_immutables
             children: [
-              Image.asset('images/AppLG.png'),
-              SizedBox(
-                height: 25,
-              ),
               Text(
-                'Hello All',
+                'Create Account',
                 style: TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1.0),
                   fontWeight: FontWeight.bold,
-                  fontSize: 24,
+                  fontSize: 35,
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 5,
               ),
-              Text(
-                'Welcome to some helpful advising',
-                style: TextStyle(
-                  color: Color.fromRGBO(255, 255, 255, 1.0),
-                  fontSize: 20,
+              Image.asset('images/AppLG.png'),
+              SizedBox(
+                height: 5,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 50, 74, 113),
+                    border:
+                    Border.all(color: Color.fromARGB(255, 73, 101, 149)),
+                    borderRadius: BorderRadius.circular(40),
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: ' Name',
+                      hintStyle: TextStyle(color: Colors.white),
+                    ),
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ),
               SizedBox(
@@ -64,6 +76,9 @@ class _LoginPageState extends State<LoginPage> {
                       border: InputBorder.none,
                       hintText: ' Email',
                       hintStyle: TextStyle(color: Colors.white),
+                    ),
+                    style: TextStyle(
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -87,11 +102,38 @@ class _LoginPageState extends State<LoginPage> {
                       hintText: ' Password',
                       hintStyle: TextStyle(color: Colors.white),
                     ),
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
               SizedBox(
-                height: 25,
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 50, 74, 113),
+                    border:
+                    Border.all(color: Color.fromARGB(255, 73, 101, 149)),
+                    borderRadius: BorderRadius.circular(40),
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: ' Confirm Password',
+                      hintStyle: TextStyle(color: Colors.white),
+                    ),
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -102,7 +144,7 @@ class _LoginPageState extends State<LoginPage> {
                       padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10),
                     ),
                     child: Text(
-                      'Log In',
+                      'Sign Up',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -120,27 +162,14 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               SizedBox(
-                height: 20,
-              ),
-              TextButton(
-                child: Text('Forgot Password?'),
-                style: TextButton.styleFrom(
-                  primary: Color.fromRGBO(113, 156, 145, 1.0),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ForgotPassword1()),
-                  );
-                },
+                height: 10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Text(
-                    "Don't have an Account?",
+                    'Have an Account?',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
@@ -148,22 +177,19 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   TextButton(
-                      child: Text('Sign Up'),
-                      style: TextButton.styleFrom(
-                        primary: Color.fromRGBO(113, 156, 145, 1.0),
-                      ),
-                      onPressed: () {
+                    child: Text('Log In'),
+                    style: TextButton.styleFrom(
+                      primary: Color.fromRGBO(113, 156, 145, 1.0),
+                    ),
+                    onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const SignUp()),
+                            builder: (context) => const LoginPage()),
                       );
                     },
                   )
                 ],
-              ),
-              SizedBox(
-                height: 15,
               ),
             ],
           ),
