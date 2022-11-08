@@ -25,20 +25,6 @@ class _SignupLoginState extends State<SignupLogin> {
             mainAxisAlignment: MainAxisAlignment.start,
             // ignore: prefer_const_literals_to_create_immutables
             children: [
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                'Sign up or Log in',
-                style: TextStyle(
-                  color: Color.fromRGBO(255, 255, 255, 1.0),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 28,
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
               ShaderMask(
                 shaderCallback: (rect) {
                   return LinearGradient(
@@ -51,9 +37,14 @@ class _SignupLoginState extends State<SignupLogin> {
                 child: Image.asset(
                   'images/Books.png',
                   height: 500,
-                  width: 600,
+                  width: 500,
                   fit: BoxFit.contain,
                 ),
+              ),
+              Image.asset(
+                'images/App Logo (7).png',
+                height: 80,
+                width: 100,
               ),
               SizedBox(
                 height: 15,

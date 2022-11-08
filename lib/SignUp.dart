@@ -15,8 +15,13 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromRGBO(37, 57, 92, 1.0),
+    return Container(
+        constraints: const BoxConstraints.expand(),
+    decoration: const BoxDecoration(
+    image: DecorationImage(
+    image: AssetImage('images/Background.png'), fit: BoxFit.cover)),
+    child: Scaffold(
+    backgroundColor: Colors.transparent,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -28,21 +33,25 @@ class _SignUpState extends State<SignUp> {
                 style: TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1.0),
                   fontWeight: FontWeight.bold,
-                  fontSize: 35,
+                  fontSize: 30,
                 ),
               ),
               SizedBox(
                 height: 5,
               ),
-              Image.asset('images/AppLG.png'),
+              Image.asset(
+                  'images/App Logo (7).png',
+                  height: 200,
+                  width: 200,
+              ),
               SizedBox(
-                height: 5,
+                height: 25,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 50, 74, 113),
+                    color: Colors.white,
                     border:
                     Border.all(color: Color.fromARGB(255, 73, 101, 149)),
                     borderRadius: BorderRadius.circular(40),
@@ -50,11 +59,11 @@ class _SignUpState extends State<SignUp> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: ' Name',
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintText: '     Name',
+                      hintStyle: TextStyle(color: Color.fromRGBO(37, 57, 92, 1.0)),
                     ),
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Color.fromRGBO(37, 57, 92, 1.0),
                     ),
                   ),
                 ),
@@ -66,7 +75,7 @@ class _SignUpState extends State<SignUp> {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 50, 74, 113),
+                    color: Colors.white,
                     border:
                         Border.all(color: Color.fromARGB(255, 73, 101, 149)),
                     borderRadius: BorderRadius.circular(40),
@@ -74,11 +83,11 @@ class _SignUpState extends State<SignUp> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: ' Email',
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintText: '     Email',
+                      hintStyle: TextStyle(color: Color.fromRGBO(37, 57, 92, 1.0)),
                     ),
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Color.fromRGBO(37, 57, 92, 1.0),
                     ),
                   ),
                 ),
@@ -90,7 +99,7 @@ class _SignUpState extends State<SignUp> {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 50, 74, 113),
+                    color: Colors.white,
                     border:
                         Border.all(color: Color.fromARGB(255, 73, 101, 149)),
                     borderRadius: BorderRadius.circular(40),
@@ -99,11 +108,11 @@ class _SignUpState extends State<SignUp> {
                     obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: ' Password',
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintText: '     Password',
+                      hintStyle: TextStyle(color: Color.fromRGBO(37, 57, 92, 1.0)),
                     ),
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Color.fromRGBO(37, 57, 92, 1.0),
                     ),
                   ),
                 ),
@@ -115,7 +124,7 @@ class _SignUpState extends State<SignUp> {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 50, 74, 113),
+                    color: Colors.white,
                     border:
                     Border.all(color: Color.fromARGB(255, 73, 101, 149)),
                     borderRadius: BorderRadius.circular(40),
@@ -123,17 +132,17 @@ class _SignUpState extends State<SignUp> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: ' Confirm Password',
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintText: '     Confirm Password',
+                      hintStyle: TextStyle(color: Color.fromRGBO(37, 57, 92, 1.0)),
                     ),
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Color.fromRGBO(37, 57, 92, 1.0),
                     ),
                   ),
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 30,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -162,7 +171,7 @@ class _SignUpState extends State<SignUp> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -195,6 +204,7 @@ class _SignUpState extends State<SignUp> {
           ),
         ),
       ),
+    ),
     );
   }
 }
