@@ -37,11 +37,12 @@ class _ForgotPassword2State extends State<ForgotPassword2> {
                 ),
               ),
               SizedBox(
-                height: 5,
+                height: 10,
               ),
               Padding(
-                padding: EdgeInsets.all(30), //apply padding to all four sides
-                child: Text("Enter in New Password",
+                padding: EdgeInsets.all(18), //apply padding to all four sides
+                child: Text("Enter in New Password                        ",
+                  textAlign: TextAlign.left,
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
@@ -69,12 +70,10 @@ class _ForgotPassword2State extends State<ForgotPassword2> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 20,
-              ),
               Padding(
-                padding: EdgeInsets.all(30), //apply padding to all four sides
-                child: Text("Enter in New Password Again",
+                padding: EdgeInsets.all(18), //apply padding to all four sides
+                child: Text("Enter in New Password Again              ",
+                  textAlign: TextAlign.left,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -103,7 +102,7 @@ class _ForgotPassword2State extends State<ForgotPassword2> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 40,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
