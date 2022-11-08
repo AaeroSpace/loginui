@@ -5,16 +5,14 @@ import 'package:loginui/login_page.dart';
 import 'package:loginui/main.dart';
 import 'package:loginui/schedule_page.dart';
 
-import 'ForgotPassword2.dart';
-
-class ForgotPassword1 extends StatefulWidget {
-  const ForgotPassword1({Key? key}) : super(key: key);
+class ForgotPassword2 extends StatefulWidget {
+  const ForgotPassword2({Key? key}) : super(key: key);
 
   @override
-  State<ForgotPassword1> createState() => _ForgotPassword1State();
+  State<ForgotPassword2> createState() => _ForgotPassword2State();
 }
 
-class _ForgotPassword1State extends State<ForgotPassword1> {
+class _ForgotPassword2State extends State<ForgotPassword2> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +29,7 @@ class _ForgotPassword1State extends State<ForgotPassword1> {
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               Text(
-                'Forgot Password',
+                'Create New Password',
                 style: TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1.0),
                   fontWeight: FontWeight.bold,
@@ -43,7 +41,7 @@ class _ForgotPassword1State extends State<ForgotPassword1> {
               ),
               Padding(
                 padding: EdgeInsets.all(30), //apply padding to all four sides
-                child: Text("We sent you an email! Please check your  inbox for the 6-digit code and enter it below.",
+                child: Text("Enter in New Password",
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
@@ -62,7 +60,40 @@ class _ForgotPassword1State extends State<ForgotPassword1> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: '   123456',
+                      hintText: '   Password',
+                      hintStyle: TextStyle(color: Colors.white),
+                    ),
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: EdgeInsets.all(30), //apply padding to all four sides
+                child: Text("Enter in New Password Again",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 50, 74, 113),
+                    border:
+                    Border.all(color: Color.fromARGB(255, 73, 101, 149)),
+                    borderRadius: BorderRadius.circular(40),
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: '   Password',
                       hintStyle: TextStyle(color: Colors.white),
                     ),
                     style: TextStyle(
@@ -94,7 +125,7 @@ class _ForgotPassword1State extends State<ForgotPassword1> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const ForgotPassword2()),
+                            builder: (context) => const Scheduler()),
                       );
                     },
                   ),

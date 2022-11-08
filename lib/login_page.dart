@@ -17,44 +17,38 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color.fromRGBO(37, 57, 92, 1.0),
+    return Container(
+        constraints: const BoxConstraints.expand(),
+        decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage('images/Background.png'), fit: BoxFit.cover)),
+    child: Scaffold(
+        backgroundColor: Colors.transparent,
       body: SafeArea(
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             // ignore: prefer_const_literals_to_create_immutables
             children: [
-              Image.asset('images/AppLG.png'),
+              Image.asset('images/Advisiored (7).png'),
               SizedBox(
-                height: 25,
+                height: 40,
               ),
               Text(
-                'Hello All',
-                style: TextStyle(
-                  color: Color.fromRGBO(255, 255, 255, 1.0),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                'Welcome to some helpful advising',
+                'Welcome Back to Advisiored',
                 style: TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1.0),
                   fontSize: 20,
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 40,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 50, 74, 113),
+                    color: Colors.white,
                     border:
                         Border.all(color: Color.fromARGB(255, 73, 101, 149)),
                     borderRadius: BorderRadius.circular(40),
@@ -62,8 +56,8 @@ class _LoginPageState extends State<LoginPage> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: ' Email',
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintText: '     Email',
+                      hintStyle: TextStyle(color: Color.fromARGB(255, 50, 74, 113)),
                     ),
                   ),
                 ),
@@ -75,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 50, 74, 113),
+                    color: Colors.white,
                     border:
                         Border.all(color: Color.fromARGB(255, 73, 101, 149)),
                     borderRadius: BorderRadius.circular(40),
@@ -84,14 +78,30 @@ class _LoginPageState extends State<LoginPage> {
                     obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: ' Password',
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintText: '     Password',
+                      hintStyle: TextStyle(color: Color.fromARGB(255, 50, 74, 113)),
                     ),
                   ),
                 ),
               ),
               SizedBox(
-                height: 25,
+                height: 20,
+              ),
+              TextButton(
+                child: Text('Forgot Password?'),
+                style: TextButton.styleFrom(
+                  primary: Color.fromRGBO(113, 156, 145, 1.0),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ForgotPassword1()),
+                  );
+                },
+              ),
+              SizedBox(
+                height: 20,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -121,19 +131,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(
                 height: 20,
-              ),
-              TextButton(
-                child: Text('Forgot Password?'),
-                style: TextButton.styleFrom(
-                  primary: Color.fromRGBO(113, 156, 145, 1.0),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const ForgotPassword1()),
-                  );
-                },
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -169,6 +166,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
         ),
       ),
+    ),
     );
   }
 }
