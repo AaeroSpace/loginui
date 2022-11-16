@@ -56,8 +56,9 @@ class _LoginPageState extends State<LoginPage> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: '     Email',
+                      hintText: 'Email',
                       hintStyle: TextStyle(color: Color.fromARGB(255, 50, 74, 113)),
+                      contentPadding: EdgeInsets.all(20.0),
                     ),
                   ),
                 ),
@@ -78,8 +79,9 @@ class _LoginPageState extends State<LoginPage> {
                     obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: '     Password',
+                      hintText: 'Password',
                       hintStyle: TextStyle(color: Color.fromARGB(255, 50, 74, 113)),
+                      contentPadding: EdgeInsets.all(20.0),
                     ),
                   ),
                 ),
@@ -108,6 +110,9 @@ class _LoginPageState extends State<LoginPage> {
                 child: Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)
+                      ),
                       backgroundColor: Color(0xFFEFA93A),
                       padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10),
                     ),
