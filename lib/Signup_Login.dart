@@ -72,14 +72,17 @@ class _SignupLoginState extends State<SignupLogin> {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFFEFA93A),
-                      padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)
+                      ),
+                      padding: EdgeInsets.symmetric(horizontal: 55, vertical: 10),
                     ),
                     child: Text(
                       'Sign Up',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 25,
+                        fontSize: 23,
                       ),
                     ),
                     onPressed: () {
@@ -100,15 +103,18 @@ class _SignupLoginState extends State<SignupLogin> {
                 child: Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)
+                      ),
                       backgroundColor: Color(0xFFFFFFFF),
-                      padding: EdgeInsets.symmetric(horizontal: 55, vertical: 10),
+                      padding: EdgeInsets.symmetric(horizontal: 60, vertical: 10),
                     ),
                     child: Text(
                       'Log In',
                       style: TextStyle(
                         color: Color.fromRGBO(37, 57, 92, 1.0),
                         fontWeight: FontWeight.bold,
-                        fontSize: 25,
+                        fontSize: 24,
                       ),
                     ),
                     onPressed: () {

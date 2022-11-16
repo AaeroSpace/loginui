@@ -58,9 +58,9 @@ class _SignUpState extends State<SignUp> {
                   ),
                   child: TextField(
                     decoration: InputDecoration(
-                      border: InputBorder.none,
-                      hintText: '     Name',
+                      hintText: 'Name',
                       hintStyle: TextStyle(color: Color.fromRGBO(37, 57, 92, 1.0)),
+                      contentPadding: EdgeInsets.all(20.0),
                     ),
                     style: TextStyle(
                       color: Color.fromRGBO(37, 57, 92, 1.0),
@@ -83,8 +83,9 @@ class _SignUpState extends State<SignUp> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: '     Email',
+                      hintText: 'Email',
                       hintStyle: TextStyle(color: Color.fromRGBO(37, 57, 92, 1.0)),
+                      contentPadding: EdgeInsets.all(20.0),
                     ),
                     style: TextStyle(
                       color: Color.fromRGBO(37, 57, 92, 1.0),
@@ -108,8 +109,9 @@ class _SignUpState extends State<SignUp> {
                     obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: '     Password',
+                      hintText: 'Password',
                       hintStyle: TextStyle(color: Color.fromRGBO(37, 57, 92, 1.0)),
+                      contentPadding: EdgeInsets.all(20.0),
                     ),
                     style: TextStyle(
                       color: Color.fromRGBO(37, 57, 92, 1.0),
@@ -132,8 +134,9 @@ class _SignUpState extends State<SignUp> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: '     Confirm Password',
+                      hintText: 'Confirm Password',
                       hintStyle: TextStyle(color: Color.fromRGBO(37, 57, 92, 1.0)),
+                      contentPadding: EdgeInsets.all(20.0),
                     ),
                     style: TextStyle(
                       color: Color.fromRGBO(37, 57, 92, 1.0),
@@ -149,6 +152,9 @@ class _SignUpState extends State<SignUp> {
                 child: Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)
+                      ),
                       backgroundColor: Color(0xFFEFA93A),
                       padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10),
                     ),

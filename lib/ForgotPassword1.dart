@@ -54,19 +54,19 @@ class _ForgotPassword1State extends State<ForgotPassword1> {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 50, 74, 113),
-                    border:
-                    Border.all(color: Color.fromARGB(255, 73, 101, 149)),
+                    color: Colors.white,
+                    border: Border.all(color: Color.fromARGB(255, 73, 101, 149)),
                     borderRadius: BorderRadius.circular(40),
                   ),
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: '   123456',
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintText: '123456',
+                      hintStyle: TextStyle(color: Color.fromARGB(255, 50, 74, 113)),
+                      contentPadding: EdgeInsets.all(20.0),
                     ),
                     style: TextStyle(
-                      color: Colors.white,
+                        color: Color.fromARGB(255, 50, 74, 113)
                     ),
                   ),
                 ),
@@ -79,6 +79,9 @@ class _ForgotPassword1State extends State<ForgotPassword1> {
                 child: Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)
+                      ),
                       backgroundColor: Color(0xFFEFA93A),
                       padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10),
                     ),

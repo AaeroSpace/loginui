@@ -13,6 +13,10 @@ class ForgotPassword2 extends StatefulWidget {
 }
 
 class _ForgotPassword2State extends State<ForgotPassword2> {
+  TextEditingController emailController = new TextEditingController();
+  TextEditingController passwordController = new TextEditingController();
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -53,19 +57,22 @@ class _ForgotPassword2State extends State<ForgotPassword2> {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 50, 74, 113),
+                    color: Colors.white,
                     border:
                     Border.all(color: Color.fromARGB(255, 73, 101, 149)),
                     borderRadius: BorderRadius.circular(40),
                   ),
                   child: TextField(
+                    controller: emailController,
+                    obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: '   Password',
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintText: 'Password',
+                      hintStyle: TextStyle(color: Color.fromARGB(255, 50, 74, 113)),
+                      contentPadding: EdgeInsets.all(20.0),
                     ),
                     style: TextStyle(
-                      color: Colors.white,
+                        color: Color.fromARGB(255, 50, 74, 113)
                     ),
                   ),
                 ),
@@ -84,19 +91,22 @@ class _ForgotPassword2State extends State<ForgotPassword2> {
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 50, 74, 113),
+                    color: Colors.white,
                     border:
                     Border.all(color: Color.fromARGB(255, 73, 101, 149)),
                     borderRadius: BorderRadius.circular(40),
                   ),
                   child: TextField(
+                    controller: passwordController,
+                    obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: '   Password',
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintText: 'Password',
+                      hintStyle: TextStyle(color: Color.fromARGB(255, 50, 74, 113)),
+                      contentPadding: EdgeInsets.all(20.0),
                     ),
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 50, 74, 113),
                     ),
                   ),
                 ),
@@ -109,6 +119,9 @@ class _ForgotPassword2State extends State<ForgotPassword2> {
                 child: Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)
+                      ),
                       backgroundColor: Color(0xFFEFA93A),
                       padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10),
                     ),
@@ -121,17 +134,28 @@ class _ForgotPassword2State extends State<ForgotPassword2> {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Scheduler()),
-                      );
-                    },
+                      if(emailController.text == passwordController.text) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Scheduler()),
+                        );
+                      }else {
+                        showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                          insetPadding: EdgeInsets.all(20.0),
+                          shape: RoundedRectangleBorder(
+                              borderRadius:
+                              BorderRadius.all(Radius.circular(10.0))
+                          ),
+                          title: Text('Passwords do not match'),
+                          ),
+                        ); //Show Dialog
+                      } //else
+                    }, //onPressed
                   ),
                 ),
-              ),
-              SizedBox(
-                height: 10,
               ),
             ],
           ),
@@ -139,5 +163,5 @@ class _ForgotPassword2State extends State<ForgotPassword2> {
       ),
     ),
     );
-  }
-}
+  } //Widget
+} //Class
