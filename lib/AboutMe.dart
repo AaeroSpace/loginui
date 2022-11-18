@@ -1,3 +1,6 @@
+import 'dart:html';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'main.dart';
 import 'schedule_page.dart';
@@ -32,7 +35,7 @@ class _Aboutme extends State<Aboutme> {
     'Chemical Engineering',
     'Mechanical Engineering',
     'Civil Engineering',
-    'CE',
+    'Computer Engineering',
   ];
   String Concentrationvalue = 'First Discipline';
   var Concentration = [
@@ -58,7 +61,14 @@ class _Aboutme extends State<Aboutme> {
               // ignore: prefer_const_literals_to_create_immutables
               children: [
                 //Image.asset('images/Advisiored (7).png'),
-                Title(child: Text('Profile Settings'), color: Colors.white),
+                Title(
+                    child: Text('Profile Settings',
+                        style: TextStyle(
+                          fontFamily: 'Fira Sans Condensed',
+                          fontSize: 24.0,
+                          color: Colors.white,
+                        )),
+                    color: Colors.white),
 
                 SizedBox(
                   height: 10,
@@ -95,22 +105,29 @@ class _Aboutme extends State<Aboutme> {
                           Border.all(color: Color.fromARGB(255, 73, 101, 149)),
                       borderRadius: BorderRadius.circular(40),
                     ),
-                    child: DropdownButton(
-                      hint: Text('Classification: '),
-                      value: Classificationvalue,
-                      icon: Icon(Icons.arrow_drop_down),
-                      iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
-                      items: Classification.map((String items) {
-                        return DropdownMenuItem(
-                          value: items,
-                          child: Text(items),
-                        );
-                      }).toList(),
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          Classificationvalue = newValue!;
-                        });
-                      },
+                    padding: EdgeInsets.all(10.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text('Classification: '),
+                        DropdownButton(
+                          hint: Text('Classification: '),
+                          value: Classificationvalue,
+                          icon: Icon(Icons.arrow_drop_down),
+                          iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
+                          items: Classification.map((String items) {
+                            return DropdownMenuItem(
+                              value: items,
+                              child: Text(items),
+                            );
+                          }).toList(),
+                          onChanged: (String? newValue) {
+                            setState(() {
+                              Classificationvalue = newValue!;
+                            });
+                          },
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -121,22 +138,37 @@ class _Aboutme extends State<Aboutme> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Center(
-                    child: DropdownButton(
-                      hint: Text('Start Year: '),
-                      value: StartYearvalue,
-                      icon: Icon(Icons.arrow_drop_down),
-                      iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
-                      items: StartYear.map((String items) {
-                        return DropdownMenuItem(
-                          value: items,
-                          child: Text(items),
-                        );
-                      }).toList(),
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          StartYearvalue = newValue!;
-                        });
-                      },
+                    child: Container(
+                      padding: EdgeInsets.all(10.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Color.fromARGB(255, 73, 101, 149)),
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text('Start Year: '),
+                          DropdownButton(
+                            hint: Text('Start Year: '),
+                            value: StartYearvalue,
+                            icon: Icon(Icons.arrow_drop_down),
+                            iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
+                            items: StartYear.map((String items) {
+                              return DropdownMenuItem(
+                                value: items,
+                                child: Text(items),
+                              );
+                            }).toList(),
+                            onChanged: (String? newValue) {
+                              setState(() {
+                                StartYearvalue = newValue!;
+                              });
+                            },
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -147,47 +179,104 @@ class _Aboutme extends State<Aboutme> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Center(
-                    child: DropdownButton(
-                      hint: Text('Major: '),
-                      value: Majorvalue,
-                      icon: Icon(Icons.arrow_drop_down),
-                      iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
-                      items: Major.map((String items) {
-                        return DropdownMenuItem(
-                          value: items,
-                          child: Text(items),
-                        );
-                      }).toList(),
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          Majorvalue = newValue!;
-                        });
-                      },
+                    child: Container(
+                      padding: EdgeInsets.all(10.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Color.fromARGB(255, 73, 101, 149)),
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text('Major: '),
+                          DropdownButton(
+                            hint: Text('Major: '),
+                            value: Majorvalue,
+                            icon: Icon(Icons.arrow_drop_down),
+                            iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
+                            items: Major.map((String items) {
+                              return DropdownMenuItem(
+                                value: items,
+                                child: Text(items),
+                              );
+                            }).toList(),
+                            onChanged: (String? newValue) {
+                              setState(() {
+                                Majorvalue = newValue!;
+                              });
+                            },
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
+                //  Row(
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   // ignore: prefer_const_literals_to_create_immutables
+                //   children: [
+                //     Text(
+                //       "Don't have an Account?",
+                //       style: TextStyle(
+                //         color: Colors.white,
+                //         fontWeight: FontWeight.bold,
+                //         fontSize: 15,
+                //       ),
+                //     ),
+                //     TextButton(
+                //       child: Text('Sign Up'),
+                //       style: TextButton.styleFrom(
+                //         primary: Color.fromRGBO(113, 156, 145, 1.0),
+                //       ),
+                //       onPressed: () {
+                //         Navigator.push(
+                //           context,
+                //           MaterialPageRoute(
+                //               builder: (context) => const SignUp()),
+                //         );
+                //       },
+                //     )
+                //   ],
+                // ),
                 SizedBox(
                   height: 15,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Center(
-                    child: DropdownButton(
-                      hint: Text('Concentration: '),
-                      value: Concentrationvalue,
-                      icon: Icon(Icons.arrow_drop_down),
-                      iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
-                      items: Concentration.map((String items) {
-                        return DropdownMenuItem(
-                          value: items,
-                          child: Text(items),
-                        );
-                      }).toList(),
-                      onChanged: (String? newValue) {
-                        setState(() {
-                          Concentrationvalue = newValue!;
-                        });
-                      },
+                    child: Container(
+                      padding: EdgeInsets.all(10.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border.all(
+                            color: Color.fromARGB(255, 73, 101, 149)),
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Text('Concentration: '),
+                          DropdownButton(
+                            hint: Text('Concentration: '),
+                            value: Concentrationvalue,
+                            icon: Icon(Icons.arrow_drop_down),
+                            iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
+                            items: Concentration.map((String items) {
+                              return DropdownMenuItem(
+                                value: items,
+                                child: Text(items),
+                              );
+                            }).toList(),
+                            onChanged: (String? newValue) {
+                              setState(() {
+                                Concentrationvalue = newValue!;
+                              });
+                            },
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
