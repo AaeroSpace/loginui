@@ -115,15 +115,15 @@ class _ForgotPassword2State extends State<ForgotPassword2> {
                 height: 40,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
+                          borderRadius: BorderRadius.circular(25)
                       ),
                       backgroundColor: Color(0xFFEFA93A),
-                      padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10),
+                      padding: EdgeInsets.symmetric(horizontal: 100, vertical: 12),
                     ),
                     child: Text(
                       'Continue',

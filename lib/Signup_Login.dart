@@ -36,8 +36,8 @@ class _SignupLoginState extends State<SignupLogin> {
                 blendMode: BlendMode.dstIn,
                 child: Image.asset(
                   'images/Books.png',
-                  height: 500,
-                  width: 500,
+                  height: 550,
+                  width: 600,
                   fit: BoxFit.contain,
                 ),
               ),
@@ -67,22 +67,22 @@ class _SignupLoginState extends State<SignupLogin> {
                 height: 10,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 100.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFFEFA93A),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
+                          borderRadius: BorderRadius.circular(25)
                       ),
-                      padding: EdgeInsets.symmetric(horizontal: 55, vertical: 10),
+                      padding: EdgeInsets.symmetric(horizontal: 100, vertical: 12),
                     ),
                     child: Text(
                       'Sign Up',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 23,
+                        fontSize: 25,
                       ),
                     ),
                     onPressed: () {
@@ -99,22 +99,22 @@ class _SignupLoginState extends State<SignupLogin> {
                 height: 15,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 100.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
+                          borderRadius: BorderRadius.circular(25)
                       ),
                       backgroundColor: Color(0xFFFFFFFF),
-                      padding: EdgeInsets.symmetric(horizontal: 60, vertical: 10),
+                      padding: EdgeInsets.symmetric(horizontal: 100, vertical: 12),
                     ),
                     child: Text(
-                      'Log In',
+                      '  Log In ',
                       style: TextStyle(
                         color: Color.fromRGBO(37, 57, 92, 1.0),
                         fontWeight: FontWeight.bold,
-                        fontSize: 24,
+                        fontSize: 25,
                       ),
                     ),
                     onPressed: () {

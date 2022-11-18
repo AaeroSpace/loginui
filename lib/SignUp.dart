@@ -13,6 +13,8 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  TextEditingController controller1 = new TextEditingController();
+  TextEditingController controller2 = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -106,6 +108,7 @@ class _SignUpState extends State<SignUp> {
                     borderRadius: BorderRadius.circular(40),
                   ),
                   child: TextField(
+                    controller: controller1,
                     obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
@@ -132,6 +135,8 @@ class _SignUpState extends State<SignUp> {
                     borderRadius: BorderRadius.circular(40),
                   ),
                   child: TextField(
+                    controller: controller2,
+                    obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Confirm Password',
@@ -148,15 +153,15 @@ class _SignUpState extends State<SignUp> {
                 height: 30,
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)
+                          borderRadius: BorderRadius.circular(25)
                       ),
                       backgroundColor: Color(0xFFEFA93A),
-                      padding: EdgeInsets.symmetric(horizontal: 45, vertical: 10),
+                      padding: EdgeInsets.symmetric(horizontal: 100, vertical: 12),
                     ),
                     child: Text(
                       'Sign Up',
@@ -166,13 +171,27 @@ class _SignUpState extends State<SignUp> {
                         fontSize: 25,
                       ),
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Scheduler()),
-                      );
-                    },
+                      onPressed: () {
+                        if(controller1.text == controller2.text) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Scheduler()),
+                          );
+                        }else {
+                          showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                              insetPadding: EdgeInsets.all(20.0),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                  BorderRadius.all(Radius.circular(10.0))
+                              ),
+                              title: Text('Passwords do not match'),
+                            ),
+                          ); //Show Dialog
+                        } //else
+                      }
                   ),
                 ),
               ),
