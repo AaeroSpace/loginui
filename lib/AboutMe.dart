@@ -28,13 +28,13 @@ class _Aboutme extends State<Aboutme> {
   ];
   String Majorvalue = 'Computer Science';
   var Major = [
-    'Compter Science',
+    'Computer Science',
     'Chemical Engineering',
     'Mechanical Engineering',
     'Civil Engineering',
-    'Computer Engineering',
+    'CE',
   ];
-  String Concentrationvalue = 'Item 1';
+  String Concentrationvalue = 'First Discipline';
   var Concentration = [
     'First Discipline',
     'Second Discipline',
