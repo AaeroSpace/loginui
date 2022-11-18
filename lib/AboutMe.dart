@@ -59,16 +59,7 @@ class _Aboutme extends State<Aboutme> {
               children: [
                 //Image.asset('images/Advisiored (7).png'),
                 Title(child: Text('Profile Settings'), color: Colors.white),
-                SizedBox(
-                  height: 40,
-                ),
-                Text(
-                  'About Me',
-                  style: TextStyle(
-                    color: Color.fromRGBO(255, 255, 255, 1.0),
-                    fontSize: 20,
-                  ),
-                ),
+
                 SizedBox(
                   height: 10,
                 ),
