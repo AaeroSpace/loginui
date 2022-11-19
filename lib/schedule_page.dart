@@ -227,6 +227,23 @@ class _SchedulerPage extends State<Scheduler> {
                                       fontSize: 16,
                                     ),
                                   ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  ElevatedButton(
+                                    onPressed: () {},
+                                    child: Text('MATH 1111',
+                                        style: TextStyle(fontSize: 10)),
+                                    style: ElevatedButton.styleFrom(
+                                      shape: const RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(10))),
+                                      backgroundColor:
+                                          Color.fromRGBO(113, 156, 145, 1.0),
+                                      padding: const EdgeInsets.symmetric(
+                                          vertical: 10, horizontal: 10),
+                                    ),
+                                  )
                                 ],
                               ),
                               const Divider(
@@ -264,7 +281,7 @@ class _SchedulerPage extends State<Scheduler> {
                     child: Row(
                       children: [
                         Text(
-                          'CSC 1350',
+                          'CSC 1351',
                           style: TextStyle(
                             color: Color.fromRGBO(37, 57, 92, 1.0),
                             fontSize: 24,
@@ -322,7 +339,7 @@ class _SchedulerPage extends State<Scheduler> {
                     child: Row(
                       children: [
                         Text(
-                          'MATH 1550',
+                          'MATH 1551',
                           style: TextStyle(
                             color: Color.fromRGBO(37, 57, 92, 1.0),
                             fontSize: 24,
@@ -380,7 +397,7 @@ class _SchedulerPage extends State<Scheduler> {
                     child: Row(
                       children: [
                         Text(
-                          'ENGL 1001',
+                          'ENGL 2000',
                           style: TextStyle(
                             color: Color.fromRGBO(37, 57, 92, 1.0),
                             fontSize: 24,
@@ -438,7 +455,7 @@ class _SchedulerPage extends State<Scheduler> {
                     child: Row(
                       children: [
                         Text(
-                          'BIOL 1001',
+                          'ASTR 1101',
                           style: TextStyle(
                             color: Color.fromRGBO(37, 57, 92, 1.0),
                             fontSize: 24,
@@ -464,10 +481,70 @@ class _SchedulerPage extends State<Scheduler> {
                         EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
               ),
               SizedBox(
-                height: 230,
+                height: 11,
+              ),
+              //Math 1551 button
+              InkWell(
+                onTap: () {
+                  showModalBottomSheet<void>(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Container(
+                        height: 200,
+                        color: Color.fromRGBO(233, 233, 233, 1.0),
+                        child: Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              const Text('Modal BottomSheet'),
+                              ElevatedButton(
+                                child: const Text('Close BottomSheet'),
+                                onPressed: () => Navigator.pop(context),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                },
+                child: Container(
+                    child: Row(
+                      children: [
+                        Text(
+                          'ASTR 1108',
+                          style: TextStyle(
+                            color: Color.fromRGBO(37, 57, 92, 1.0),
+                            fontSize: 24,
+                          ),
+                        ),
+                        Expanded(child: Container()),
+                        Text(
+                          '1',
+                          style: TextStyle(
+                            color: Color.fromRGBO(37, 57, 92, 1.0),
+                            fontSize: 24,
+                          ),
+                        ),
+                      ],
+                    ),
+                    height: 60,
+                    width: 390,
+                    decoration: BoxDecoration(
+                      color: _elevatedButtonColor,
+                      borderRadius: BorderRadius.all(Radius.circular(15)),
+                    ),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
+              ),
+              SizedBox(
+                height: 150,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  _elevatedButtonColor = Color.fromRGBO(239, 169, 58, 1.0);
+                },
                 child: Text(
                   'Confirm Schedule',
                   style: TextStyle(
