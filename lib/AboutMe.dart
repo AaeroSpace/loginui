@@ -1,6 +1,3 @@
-import 'dart:html';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'main.dart';
 import 'schedule_page.dart';
@@ -281,20 +278,20 @@ class _Aboutme extends State<Aboutme> {
                   ),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 20,
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(25)),
                       backgroundColor: Color(0xFFEFA93A),
                       padding:
-                          EdgeInsets.symmetric(horizontal: 45, vertical: 10),
+                          const EdgeInsets.symmetric(horizontal: 80, vertical: 12),
                     ),
-                    child: Text(
+                    child: const Text(
                       'Save Changes',
                       style: TextStyle(
                         color: Colors.white,
@@ -306,7 +303,7 @@ class _Aboutme extends State<Aboutme> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Aboutme()),
+                            builder: (context) => const Scheduler()),
                       );
                     },
                   ),
