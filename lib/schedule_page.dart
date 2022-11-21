@@ -75,7 +75,8 @@ class _SchedulerPage extends State<Scheduler> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Filters()),
+                        builder: (context) => Filters(selectedFunction: (List<String> List) {  }, ),
+                    )
                   );
                 },
               ),
