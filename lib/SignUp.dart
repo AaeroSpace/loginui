@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:loginui/AboutMe.dart';
 import 'package:loginui/login_page.dart';
 import 'package:loginui/main.dart';
 import 'package:loginui/schedule_page.dart';
@@ -176,7 +177,7 @@ class _SignUpState extends State<SignUp> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Scheduler()),
+                                builder: (context) => const Aboutme()),
                           );
                         }else {
                           showDialog(
