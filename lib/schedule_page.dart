@@ -6,6 +6,7 @@ import 'package:loginui/Fall22done.dart';
 import 'package:loginui/filters.dart';
 import 'package:loginui/schedule_page2.dart';
 import 'login_page.dart';
+import 'profile_page.dart';
 
 class Scheduler extends StatefulWidget {
   const Scheduler({Key? key}) : super(key: key);
@@ -33,7 +34,12 @@ class _SchedulerPage extends State<Scheduler> {
           children: [
             IconButton(
               icon: Icon(Icons.account_circle_rounded),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ProfilePage()));
+              },
             ),
           ],
           mainAxisAlignment: MainAxisAlignment.end,
