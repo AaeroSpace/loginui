@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:loginui/login_page.dart';
 import 'package:loginui/main.dart';
+import 'package:loginui/schedule_page.dart';
 
 import 'Signup_Login.dart';
 import 'settings.dart';
@@ -189,7 +190,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Fall22()),
+                              builder: (context) => const Scheduler()),
                         );
                       },
                     ),
