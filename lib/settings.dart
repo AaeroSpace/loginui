@@ -325,20 +325,20 @@ class _SettingsPageState extends State<SettingsPage> {
               Column(
                 children: [
                   SizedBox(
-                    height: 15,
+                    width: 30,
                   ),
-                  Center(
-                    child: IconButton(
-                      icon: Icon(Icons.arrow_back_ios_rounded,
-                          color: Color.fromARGB(255, 255, 255, 255)),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const ProfilePage()));
-                      },
-                    ),
-                  )
+                  // Center(
+                  //   child: IconButton(
+                  //     icon: Icon(Icons.arrow_back_ios_rounded,
+                  //         color: Color.fromARGB(255, 255, 255, 255)),
+                  //     onPressed: () {
+                  //       Navigator.push(
+                  //           context,
+                  //           MaterialPageRoute(
+                  //               builder: (context) => const ProfilePage()));
+                  //     },
+                  //   ),
+                  // )
                 ],
               ),
               Column(children: [
