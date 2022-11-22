@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, use_key_in_widget_constructors, must_be_immutable, avoid_returning_null_for_void, prefer_function_declarations_over_variables
 
 import 'package:flutter/material.dart';
-//import 'package:loginui/schedule_page.dart';
-//import 'package:loginui/main.dart';
+import 'package:loginui/schedule_page.dart';
+import 'package:loginui/main.dart';
+import 'package:multiselect/multiselect.dart';
 
 void main() {
   final Function(List<String>) selectedFunc = (List<String> list) {};
@@ -17,21 +18,15 @@ class Filters extends StatefulWidget {
 
   @override
   State<Filters> createState() => _FiltersState();
+
 }
 
 class _FiltersState extends State<Filters> {
+  List<String> selected = [];
   List<String> selectedItemsList = [];
   String dropdownValue = "Select";
   String selectedText = "";
-  List<String> profs = [
-    'Bradley McIntosh',
-    'Hannah Spearritt',
-    'Jo O\'Meara',
-    'Jon Lee',
-    'Rachel Stevens',
-    'Tina Barrett',
-    'Paul Cattermole'
-  ];
+
   bool _beenPressedMon = false;
   bool _beenPressedTue = false;
   bool _beenPressedWed = false;
@@ -95,171 +90,256 @@ class _FiltersState extends State<Filters> {
         ),
         body: Center(
             child: Column(
-          children: [
-            Row(
-              children: <Widget>[
-                Expanded(
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: _beenPressedMon
-                          ? Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.05)
-                          : Color.fromRGBO(37, 57, 92, 1.0),
-                    ),
-                    onPressed: () => {
-                      setState(() {
-                        _beenPressedMon = !_beenPressedMon;
-                      })
-                    },
-                    child: const Text('M'),
+              children: [
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Filters',
+                  style: TextStyle(
+                    height: 1.6,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Color.fromRGBO(37, 57, 92, 1.0),
                   ),
                 ),
-                Expanded(
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: _beenPressedTue
-                          ? Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.05)
-                          : Color.fromRGBO(37, 57, 92, 1.0),
-                    ),
-                    onPressed: () => {
-                      setState(() {
-                        _beenPressedTue = !_beenPressedTue;
-                      })
-                    },
-                    child: const Text('T'),
+                SizedBox(
+                  height: 10,
+                ),
+                Divider(
+                  height: 25,
+                  thickness: 3,
+                  color: Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.4),
+                ),
+                SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  'Pick Days You Do Not Want to Take Class',
+                  style: TextStyle(
+                    height: 1.6,
+                    fontSize: 18,
+                      color: Color.fromRGBO(37, 57, 92, 1.0),
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
-                Expanded(
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: _beenPressedWed
-                          ? Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.05)
-                          : Color.fromRGBO(37, 57, 92, 1.0),
-                    ),
-                    onPressed: () => {
-                      setState(() {
-                        _beenPressedWed = !_beenPressedWed;
-                      })
-                    },
-                    child: const Text('W'),
-                  ),
+                SizedBox(
+                  height: 20,
                 ),
-                Expanded(
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: _beenPressedThu
-                          ? Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.05)
-                          : Color.fromRGBO(37, 57, 92, 1.0),
-                    ),
-                    onPressed: () => {
-                      setState(() {
-                        _beenPressedThu = !_beenPressedThu;
-                      })
-                    },
-                    child: const Text('Th'),
-                  ),
-                ),
-                Expanded(
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: _beenPressedFri
-                          ? Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.05)
-                          : Color.fromRGBO(37, 57, 92, 1.0),
-                    ),
-                    onPressed: () => {
-                      setState(() {
-                        _beenPressedFri = !_beenPressedFri;
-                      })
-                    },
-                    child: const Text('F'),
-                  ),
-                ),
-              ],
-            ),
-            Expanded(
-              child: Scaffold(
-                body: ExpansionTile(
-                  iconColor: Colors.grey,
-                  title: Text(
-                    selectedItemsList.isEmpty ? "Select" : selectedItemsList[0],
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 50, 74, 113),
-                      fontWeight: FontWeight.w400,
-                      fontSize: 15.0,
-                    ),
-                  ),
+                Row(
                   children: <Widget>[
-                    SingleChildScrollView(
-                      child: ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: profs.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return Container(
-                            margin: const EdgeInsets.only(bottom: 8.0),
-                            child: _ViewChecklist(
-                              item: profs[index],
-                              selected: (val) {
-                                selectedText = val;
-                                if (selectedItemsList.contains(val)) {
-                                  selectedItemsList.remove(val);
-                                  selectedItemsList.add(val);
-                                }
-                                widget.selectedFunction(selectedItemsList);
-                                setState(() {
-                                  dropdownValue = val;
-                                });
-                              },
-                              isSelected:
-                                  selectedItemsList.contains(profs[index]),
-                            ),
-                          );
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: _beenPressedMon
+                              ? Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.05)
+                              : Color.fromRGBO(37, 57, 92, 1.0),
+                          padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+                        ),
+                        onPressed: () => {
+                          setState(() {
+                            _beenPressedMon = !_beenPressedMon;
+                          })
                         },
+                        child: Text(
+                          'M',
+                          style: TextStyle(
+                            height: 1.6,
+                            fontSize: 30,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: _beenPressedTue
+                              ? Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.05)
+                              : Color.fromRGBO(37, 57, 92, 1.0),
+                          padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+                        ),
+                        onPressed: () => {
+                          setState(() {
+                            _beenPressedTue = !_beenPressedTue;
+                          })
+                        },
+                        child: Text(
+                          'T',
+                          style: TextStyle(
+                            height: 1.6,
+                            fontSize: 30,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: _beenPressedWed
+                              ? Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.05)
+                              : Color.fromRGBO(37, 57, 92, 1.0),
+                          padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+                        ),
+                        onPressed: () => {
+                          setState(() {
+                            _beenPressedWed = !_beenPressedWed;
+                          })
+                        },
+                        child: Text(
+                          'W',
+                          style: TextStyle(
+                            height: 1.6,
+                            fontSize: 30,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: _beenPressedThu
+                              ? Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.05)
+                              : Color.fromRGBO(37, 57, 92, 1.0),
+                          padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+                        ),
+                        onPressed: () => {
+                          setState(() {
+                            _beenPressedThu = !_beenPressedThu;
+                          })
+                        },
+                        child: Text(
+                          'TH',
+                          style: TextStyle(
+                            height: 1.6,
+                            fontSize: 30,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: _beenPressedFri
+                              ? Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.05)
+                              : Color.fromRGBO(37, 57, 92, 1.0),
+                          padding: EdgeInsets.symmetric(horizontal: 0, vertical: 20),
+                        ),
+                        onPressed: () => {
+                          setState(() {
+                            _beenPressedFri = !_beenPressedFri;
+                          })
+                        },
+                        child: Text(
+                          'F',
+                          style: TextStyle(
+                            height: 1.6,
+                            fontSize: 30,
+                          ),
+                        ),
                       ),
                     ),
                   ],
                 ),
-              ),
-            ),
-          ],
-        )),
-        bottomNavigationBar: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFEFA93A),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 45, vertical: 10),
-              ),
-              child: const Text(
-                'Clear',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                SizedBox(
+                  height: 20,
+                ),
+                Divider(
+                  height: 25,
+                  thickness: 3,
+                  color: Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.4),
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                Text(
+                  'Pick Professors You Do Not Want to Take',
+                  style: TextStyle(
+                    height: 1.6,
+                    fontSize: 18,
+                      color: Color.fromRGBO(37, 57, 92, 1.0),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+          Row(
+            children: <Widget>[
+              Expanded(
+                child: DropDownMultiSelect(
+                  onChanged: (List<String> x) {
+                    setState(() {
+                      selected =x;
+                    });
+                  },
+                  options: ['Robbi Cooper' , 'Max Johnson' , 'Quinn Tommy' , 'Ellen Shark', 'Jayme James', 'Nick Lee', 'Duriel Walker'],
+                  selectedValues: selected,
+                  whenEmpty: '  List of Professors',
                 ),
               ),
-              onPressed: () => null,
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFEFA93A),
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 45, vertical: 10),
+               ],
               ),
-              child: const Text(
-                'Done',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                SizedBox(
+                  height: 100,
                 ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25)
+                  ),
+                  backgroundColor: Color(0xFFEFA93A),
+                  padding: EdgeInsets.symmetric(horizontal: 80, vertical: 12),
+                ),
+                child: Text(
+                  'Clear',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Filters(selectedFunction: (List<String> List) {  }, ),
+                      )
+                  );
+                },
               ),
-              onPressed: () => null,
+                SizedBox(
+                  height: 20,
+                ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25)
+                  ),
+                  backgroundColor: Color(0xFFEFA93A),
+                  padding: EdgeInsets.symmetric(horizontal: 81, vertical: 12),
+                ),
+                child: Text(
+                  'Save',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Scheduler()),
+                  );
+                },
+              ),
+
+              ],
             ),
-          ],
-        ),
+            )
       ),
-    );
+        );
   }
 }
 
