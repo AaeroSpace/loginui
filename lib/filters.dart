@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, use_key_in_widget_constructors, must_be_immutable, avoid_returning_null_for_void, prefer_function_declarations_over_variables, prefer_const_literals_to_create_immutables, unused_local_variable, import_of_legacy_library_into_null_safe
 
 import 'package:flutter/material.dart';
+import 'package:loginui/profile_page.dart';
 import 'package:loginui/schedule_page.dart';
 import 'package:loginui/main.dart';
 import 'package:multiselect/multiselect.dart';
@@ -50,7 +51,12 @@ class _FiltersState extends State<Filters> {
               children: [
                 IconButton(
                   icon: Icon(Icons.account_circle_rounded),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProfilePage()));
+                  },
                 ),
               ],
             ),

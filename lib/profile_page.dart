@@ -61,15 +61,10 @@ class _ProfilePageState extends State<ProfilePage> {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 27,
+                        fontSize: 25,
                       ),
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Fall22()),
-                      );
-                    },
+                    onPressed: () {},
                   ),
                 ),
               ],
@@ -105,12 +100,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         fontSize: 27,
                       ),
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Fall22()),
-                      );
-                    },
+                    onPressed: () {},
                   ),
                 ),
               ],
@@ -146,12 +136,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         fontSize: 27,
                       ),
                     ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const Fall22()),
-                      );
-                    },
+                    onPressed: () {},
                   ),
                 ),
               ],
@@ -183,7 +168,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 30,
+                          fontSize: 23,
                         ),
                       ),
                       onPressed: () {

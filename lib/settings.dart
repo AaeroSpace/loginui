@@ -263,11 +263,11 @@ class _SettingsPageState extends State<SettingsPage> {
                           horizontal: 20, vertical: 12),
                     ),
                     child: const Text(
-                      'Save Changes',
+                      'Save',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 25,
+                        fontSize: 27,
                       ),
                     ),
                     onPressed: () {
@@ -325,20 +325,8 @@ class _SettingsPageState extends State<SettingsPage> {
               Column(
                 children: [
                   SizedBox(
-                    width: 30,
+                    height: 15,
                   ),
-                  // Center(
-                  //   child: IconButton(
-                  //     icon: Icon(Icons.arrow_back_ios_rounded,
-                  //         color: Color.fromARGB(255, 255, 255, 255)),
-                  //     onPressed: () {
-                  //       Navigator.push(
-                  //           context,
-                  //           MaterialPageRoute(
-                  //               builder: (context) => const ProfilePage()));
-                  //     },
-                  //   ),
-                  // )
                 ],
               ),
               Column(children: [

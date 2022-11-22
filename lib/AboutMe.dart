@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loginui/profile_page.dart';
 import 'main.dart';
 import 'schedule_page.dart';
 import 'ForgotPassword1.dart';
@@ -303,7 +304,7 @@ class _Aboutme extends State<Aboutme> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const Scheduler()),
+                            builder: (context) => const ProfilePage()),
                       );
                     },
                   ),
