@@ -252,22 +252,22 @@ class _SettingsPageState extends State<SettingsPage> {
                 ),
 
                 SizedBox(
-                  height: 55,
-                  width: 200,
+                  height: 40,
+                  width: 180,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25)),
                       backgroundColor: Color(0xFFEFA93A),
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 12),
+                          horizontal: 20, vertical: 7),
                     ),
                     child: const Text(
                       'Save',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 27,
+                        fontSize: 20,
                       ),
                     ),
                     onPressed: () {
@@ -284,22 +284,22 @@ class _SettingsPageState extends State<SettingsPage> {
                 ),
 
                 SizedBox(
-                  height: 55,
-                  width: 200,
+                  height: 40,
+                  width: 180,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25)),
                       backgroundColor: Color(0xFFEFA93A),
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 12),
+                          horizontal: 20, vertical: 7),
                     ),
                     child: const Text(
                       'Log Out',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 25,
+                        fontSize: 20,
                       ),
                     ),
                     onPressed: () {
@@ -368,10 +368,10 @@ class _SettingsPageState extends State<SettingsPage> {
                   child: new Text(
                     'Profile Settings',
                     style: TextStyle(
-                      color: Color.fromARGB(255, 255, 255, 255),
-                      height: 1.8,
-                      fontSize: 22,
-                    ),
+                        color: Color.fromARGB(255, 255, 255, 255),
+                        height: 1.8,
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold),
                   ),
                 ),
               ]),

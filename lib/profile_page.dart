@@ -2,12 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:loginui/filters.dart';
 import 'package:loginui/login_page.dart';
 import 'package:loginui/main.dart';
 import 'package:loginui/schedule_page.dart';
+import 'package:loginui/settings.dart';
 
 import 'Signup_Login.dart';
-import 'settings.dart';
 import 'Fall22done.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -40,34 +41,36 @@ class _ProfilePageState extends State<ProfilePage> {
                     height: 50,
                   ),
                 ]),
-            Row(
-              children: [
-                SizedBox(
-                  width: 30,
-                ),
-                SizedBox(
-                  height: 60,
-                  width: 335,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromRGBO(37, 57, 92, 1.0),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                    ),
-                    child: Text(
-                      'CSC Second Discipline',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25,
-                      ),
-                    ),
-                    onPressed: () {},
+            Center(
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 50,
                   ),
-                ),
-              ],
+                  SizedBox(
+                    height: 60,
+                    width: 335,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Color.fromRGBO(37, 57, 92, 1.0),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                      ),
+                      child: Text(
+                        'CSC Second Discipline',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 27,
+                        ),
+                      ),
+                      onPressed: () {},
+                    ),
+                  ),
+                ],
+              ),
             ),
             Row(
                 // ignore: prefer_const_literals_to_create_immutables
@@ -79,7 +82,7 @@ class _ProfilePageState extends State<ProfilePage> {
             Row(
               children: [
                 SizedBox(
-                  width: 30,
+                  width: 50,
                 ),
                 SizedBox(
                   height: 60,
@@ -100,7 +103,13 @@ class _ProfilePageState extends State<ProfilePage> {
                         fontSize: 27,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Scheduler()),
+                      );
+                    },
                   ),
                 ),
               ],
@@ -115,7 +124,7 @@ class _ProfilePageState extends State<ProfilePage> {
             Row(
               children: [
                 SizedBox(
-                  width: 30,
+                  width: 50,
                 ),
                 SizedBox(
                   height: 60,
@@ -153,22 +162,22 @@ class _ProfilePageState extends State<ProfilePage> {
               Center(
                 child: SizedBox(
                   height: 70,
-                  width: 250,
+                  width: 290,
                   child: Center(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0xFFEFA93A),
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
+                            borderRadius: BorderRadius.circular(25)),
                         padding:
-                            EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                            EdgeInsets.symmetric(horizontal: 60, vertical: 10),
                       ),
                       child: Text(
                         'Go to Schedule',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 23,
+                          fontSize: 25,
                         ),
                       ),
                       onPressed: () {
@@ -186,7 +195,6 @@ class _ProfilePageState extends State<ProfilePage> {
           ]))),
       appBar: AppBar(
         toolbarHeight: 250,
-        automaticallyImplyLeading: false,
         title: Container(
           child: Column(
             // ignore: prefer_const_literals_to_create_immutables
@@ -246,9 +254,11 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: Color.fromRGBO(37, 57, 92, 1.0)),
                       onPressed: () {
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const SettingsPage()));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SettingsPage(),
+                          ),
+                        );
                       },
                     )),
               )

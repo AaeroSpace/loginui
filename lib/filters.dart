@@ -43,6 +43,7 @@ class _FiltersState extends State<Filters> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
             toolbarHeight: 150,
@@ -75,7 +76,7 @@ class _FiltersState extends State<Filters> {
                       shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                       )),
-                  child: Text('1'),
+                  child: Text('1/8'),
                 ),
                 Text(
                   'Fall 2022',
@@ -144,9 +145,10 @@ class _FiltersState extends State<Filters> {
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: _beenPressedMon
-                              ? Color.fromRGBO(37, 57, 92, 1.0)
-                                  .withOpacity(0.05)
-                              : Color.fromRGBO(37, 57, 92, 1.0),
+                              ? Color.fromRGBO(37, 57, 92, 1)
+                              : Color.fromRGBO(233, 233, 233, 1.0),
+                          side: BorderSide(
+                              width: 3, color: Color.fromRGBO(37, 57, 92, 1.0)),
                           padding:
                               EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                         ),
@@ -158,9 +160,9 @@ class _FiltersState extends State<Filters> {
                         child: Text(
                           'M',
                           style: TextStyle(
-                            height: 1.6,
-                            fontSize: 30,
-                          ),
+                              height: 1.6,
+                              fontSize: 30,
+                              color: Color.fromRGBO(37, 57, 92, 1)),
                         ),
                       ),
                     ),
@@ -168,9 +170,10 @@ class _FiltersState extends State<Filters> {
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: _beenPressedTue
-                              ? Color.fromRGBO(37, 57, 92, 1.0)
-                                  .withOpacity(0.05)
-                              : Color.fromRGBO(37, 57, 92, 1.0),
+                              ? Color.fromRGBO(37, 57, 92, 1)
+                              : Color.fromRGBO(233, 233, 233, 1.0),
+                          side: BorderSide(
+                              width: 3, color: Color.fromRGBO(37, 57, 92, 1.0)),
                           padding:
                               EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                         ),
@@ -182,9 +185,9 @@ class _FiltersState extends State<Filters> {
                         child: Text(
                           'T',
                           style: TextStyle(
-                            height: 1.6,
-                            fontSize: 30,
-                          ),
+                              height: 1.6,
+                              fontSize: 30,
+                              color: Color.fromRGBO(37, 57, 92, 1)),
                         ),
                       ),
                     ),
@@ -192,9 +195,10 @@ class _FiltersState extends State<Filters> {
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: _beenPressedWed
-                              ? Color.fromRGBO(37, 57, 92, 1.0)
-                                  .withOpacity(0.05)
-                              : Color.fromRGBO(37, 57, 92, 1.0),
+                              ? Color.fromRGBO(37, 57, 92, 1)
+                              : Color.fromRGBO(233, 233, 233, 1.0),
+                          side: BorderSide(
+                              width: 3, color: Color.fromRGBO(37, 57, 92, 1.0)),
                           padding:
                               EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                         ),
@@ -206,9 +210,9 @@ class _FiltersState extends State<Filters> {
                         child: Text(
                           'W',
                           style: TextStyle(
-                            height: 1.6,
-                            fontSize: 30,
-                          ),
+                              height: 1.6,
+                              fontSize: 30,
+                              color: Color.fromRGBO(37, 57, 92, 1)),
                         ),
                       ),
                     ),
@@ -216,9 +220,10 @@ class _FiltersState extends State<Filters> {
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: _beenPressedThu
-                              ? Color.fromRGBO(37, 57, 92, 1.0)
-                                  .withOpacity(0.05)
-                              : Color.fromRGBO(37, 57, 92, 1.0),
+                              ? Color.fromRGBO(37, 57, 92, 1)
+                              : Color.fromRGBO(233, 233, 233, 1.0),
+                          side: BorderSide(
+                              width: 3, color: Color.fromRGBO(37, 57, 92, 1.0)),
                           padding:
                               EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                         ),
@@ -230,9 +235,9 @@ class _FiltersState extends State<Filters> {
                         child: Text(
                           'TH',
                           style: TextStyle(
-                            height: 1.6,
-                            fontSize: 30,
-                          ),
+                              height: 1.6,
+                              fontSize: 30,
+                              color: Color.fromRGBO(37, 57, 92, 1)),
                         ),
                       ),
                     ),
@@ -240,9 +245,10 @@ class _FiltersState extends State<Filters> {
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: _beenPressedFri
-                              ? Color.fromRGBO(37, 57, 92, 1.0)
-                                  .withOpacity(0.05)
-                              : Color.fromRGBO(37, 57, 92, 1.0),
+                              ? Color.fromRGBO(37, 57, 92, 1)
+                              : Color.fromRGBO(233, 233, 233, 1.0),
+                          side: BorderSide(
+                              width: 3, color: Color.fromRGBO(37, 57, 92, 1.0)),
                           padding:
                               EdgeInsets.symmetric(horizontal: 0, vertical: 20),
                         ),
@@ -254,9 +260,9 @@ class _FiltersState extends State<Filters> {
                         child: Text(
                           'F',
                           style: TextStyle(
-                            height: 1.6,
-                            fontSize: 30,
-                          ),
+                              height: 1.6,
+                              fontSize: 30,
+                              color: Color.fromRGBO(37, 57, 92, 1)),
                         ),
                       ),
                     ),
@@ -312,59 +318,66 @@ class _FiltersState extends State<Filters> {
                 SizedBox(
                   height: 100,
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25)),
-                    backgroundColor: Color(0xFFEFA93A),
-                    padding: EdgeInsets.symmetric(horizontal: 80, vertical: 12),
+                Row(children: [
+                  SizedBox(
+                    width: 40,
                   ),
-                  child: Text(
-                    'Clear',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25)),
+                      backgroundColor: Color(0xFFEFA93A),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 50, vertical: 12),
                     ),
+                    child: Text(
+                      'Reset',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    onPressed: () {
+                      _clearFilters();
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Filters(
+                              selectedFunction: (List<String> List) {},
+                            ),
+                          ));
+                    },
                   ),
-                  onPressed: () {
-                    _clearFilters();
-                    Navigator.push(
+                  SizedBox(
+                    width: 50,
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25)),
+                      backgroundColor: Color(0xFFEFA93A),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 51, vertical: 12),
+                    ),
+                    child: Text(
+                      'Save',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    onPressed: () {
+                      _saveFilters();
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => Filters(
-                            selectedFunction: (List<String> List) {},
-                          ),
-                        ));
-                  },
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25)),
-                    backgroundColor: Color(0xFFEFA93A),
-                    padding: EdgeInsets.symmetric(horizontal: 81, vertical: 12),
+                            builder: (context) => const Scheduler()),
+                      );
+                    },
                   ),
-                  child: Text(
-                    'Save',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
-                  ),
-                  onPressed: () {
-                    _saveFilters();
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Scheduler()),
-                    );
-                  },
-                ),
+                ]),
               ],
             ),
           )),

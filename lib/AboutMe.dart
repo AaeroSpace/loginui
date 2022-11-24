@@ -62,10 +62,10 @@ class _Aboutme extends State<Aboutme> {
                 Title(
                     child: Text('Profile Settings',
                         style: TextStyle(
-                          fontFamily: 'Fira Sans Condensed',
-                          fontSize: 24.0,
-                          color: Colors.white,
-                        )),
+                            fontFamily: 'Fira Sans Condensed',
+                            fontSize: 24.0,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold)),
                     color: Colors.white),
 
                 SizedBox(
@@ -289,8 +289,8 @@ class _Aboutme extends State<Aboutme> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25)),
                       backgroundColor: Color(0xFFEFA93A),
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 80, vertical: 12),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 80, vertical: 12),
                     ),
                     child: const Text(
                       'Save Changes',

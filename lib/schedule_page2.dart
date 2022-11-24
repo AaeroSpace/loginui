@@ -1,9 +1,11 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_final_fields, prefer_interpolation_to_compose_strings, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_final_fields, prefer_interpolation_to_compose_strings, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:loginui/Fall22done.dart';
 import 'package:loginui/filters.dart';
+import 'package:loginui/schedule_page.dart';
 import 'login_page.dart';
 import 'profile_page.dart';
 
@@ -48,8 +50,69 @@ class _Scheduler2Page extends State<Scheduler2> {
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               TextButton(
-                onPressed: () {},
-                child: Text('2'),
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      backgroundColor: Color.fromRGBO(233, 233, 233, 1.0),
+                      title: Center(child: Text('View Past Semesters')),
+                      actions: [
+                        TextButton(
+                          child: Text(
+                            '1',
+                            style: TextStyle(
+                              color: Color.fromRGBO(37, 57, 92, 1.0),
+                              fontSize: 40,
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Fall22()),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            side: BorderSide(
+                                width: 3,
+                                color: Color.fromRGBO(37, 57, 92, 1.0)),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 60,
+                          height: 80,
+                        ),
+                        TextButton(
+                          child: Text(
+                            '2',
+                            style: TextStyle(
+                              color: Color.fromRGBO(37, 57, 92, 1.0),
+                              fontSize: 40,
+                            ),
+                          ),
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            side: BorderSide(
+                                width: 3,
+                                color: Color.fromRGBO(37, 57, 92, 1.0)),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                      ],
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                    ),
+                  );
+                },
+                child: Text('2/8'),
                 style: TextButton.styleFrom(
                     primary: Color.fromRGBO(37, 57, 92, 1.0),
                     backgroundColor: Colors.white,
@@ -80,7 +143,9 @@ class _Scheduler2Page extends State<Scheduler2> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => Filters(selectedFunction: (List<String> List) {  }, ),
+                      builder: (context) => Filters(
+                        selectedFunction: (List<String> List) {},
+                      ),
                     ),
                   );
                 },
@@ -112,9 +177,9 @@ class _Scheduler2Page extends State<Scheduler2> {
                 ),
                 Expanded(
                     child: Container(
-                      height: 70,
-                      width: 25,
-                    )),
+                  height: 70,
+                  width: 25,
+                )),
                 Container(
                   child: Text(
                     'Section #',
@@ -182,7 +247,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         '9:00am -\n10:20am',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontSize: 16,
                                         ),
                                       )
@@ -199,7 +264,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         'M,W,F\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -217,7 +282,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         'Cooper, Robbie\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -255,7 +320,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10))),
                                       backgroundColor:
-                                      Color.fromRGBO(113, 156, 145, 1.0),
+                                          Color.fromRGBO(113, 156, 145, 1.0),
                                       padding: const EdgeInsets.symmetric(
                                           vertical: 10, horizontal: 10),
                                     ),
@@ -271,7 +336,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                 children: [
                                   Padding(
                                       padding:
-                                      EdgeInsets.symmetric(horizontal: 50)),
+                                          EdgeInsets.symmetric(horizontal: 50)),
                                   SizedBox(
                                     child: Text(
                                       'This course teaches students how to develop solutions to problems using an object-oriented approach and emphasizes the concepts of recursion; dynamic memory; data structures (lists, stacks, queues, trees); exception handling. ',
@@ -318,7 +383,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                     ),
                     padding:
-                    EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
+                        EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
               ),
               SizedBox(
                 height: 11,
@@ -376,7 +441,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         '10:30am -\n11:20am',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontSize: 16,
                                         ),
                                       )
@@ -393,7 +458,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         'M,T,W,TH\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -411,7 +476,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         'White, Pearl\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -449,7 +514,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10))),
                                       backgroundColor:
-                                      Color.fromRGBO(113, 156, 145, 1.0),
+                                          Color.fromRGBO(113, 156, 145, 1.0),
                                       padding: const EdgeInsets.symmetric(
                                           vertical: 10, horizontal: 10),
                                     ),
@@ -465,7 +530,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                 children: [
                                   Padding(
                                       padding:
-                                      EdgeInsets.symmetric(horizontal: 50)),
+                                          EdgeInsets.symmetric(horizontal: 50)),
                                   SizedBox(
                                     child: Text(
                                       'This course teaches techniques of integration, parametric equations, analytic geometry, polar coordinates, infinite series, vectors in low dimensions; introduction to differential equations and partial derivatives.',
@@ -512,7 +577,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                     ),
                     padding:
-                    EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
+                        EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
               ),
               SizedBox(
                 height: 11,
@@ -570,7 +635,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         '11:30am -\n12:20pm',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontSize: 16,
                                         ),
                                       )
@@ -587,7 +652,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         'M, W, F\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -605,7 +670,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         'Jones, Tanya\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -643,7 +708,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10))),
                                       backgroundColor:
-                                      Color.fromRGBO(113, 156, 145, 1.0),
+                                          Color.fromRGBO(113, 156, 145, 1.0),
                                       padding: const EdgeInsets.symmetric(
                                           vertical: 10, horizontal: 10),
                                     ),
@@ -659,7 +724,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                 children: [
                                   Padding(
                                       padding:
-                                      EdgeInsets.symmetric(horizontal: 50)),
+                                          EdgeInsets.symmetric(horizontal: 50)),
                                   SizedBox(
                                     child: Text(
                                       'The purpose of this course is to advance students’ writing skills in a variety of academic, professional, and public genres, with an emphasis on research and argumentation.',
@@ -706,7 +771,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                     ),
                     padding:
-                    EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
+                        EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
               ),
               SizedBox(
                 height: 11,
@@ -764,7 +829,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         '3:00pm -\n3:50pm',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontSize: 16,
                                         ),
                                       )
@@ -781,7 +846,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         'M, W, F\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -799,7 +864,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         'Jackson, Mike\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -837,7 +902,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10))),
                                       backgroundColor:
-                                      Color.fromRGBO(113, 156, 145, 1.0),
+                                          Color.fromRGBO(113, 156, 145, 1.0),
                                       padding: const EdgeInsets.symmetric(
                                           vertical: 10, horizontal: 10),
                                     ),
@@ -853,7 +918,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                 children: [
                                   Padding(
                                       padding:
-                                      EdgeInsets.symmetric(horizontal: 50)),
+                                          EdgeInsets.symmetric(horizontal: 50)),
                                   SizedBox(
                                     child: Text(
                                       'This is an introductory astronomy course for the general student with a primary focus in the solar system.',
@@ -900,7 +965,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                     ),
                     padding:
-                    EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
+                        EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
               ),
               SizedBox(
                 height: 11,
@@ -958,7 +1023,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         '1:00pm -\n2:50pm',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontSize: 16,
                                         ),
                                       )
@@ -975,7 +1040,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         'W\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -993,7 +1058,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         'Jackson, Mike\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -1031,7 +1096,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10))),
                                       backgroundColor:
-                                      Color.fromRGBO(113, 156, 145, 1.0),
+                                          Color.fromRGBO(113, 156, 145, 1.0),
                                       padding: const EdgeInsets.symmetric(
                                           vertical: 10, horizontal: 10),
                                     ),
@@ -1047,7 +1112,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                 children: [
                                   Padding(
                                       padding:
-                                      EdgeInsets.symmetric(horizontal: 50)),
+                                          EdgeInsets.symmetric(horizontal: 50)),
                                   SizedBox(
                                     child: Text(
                                       'Visual observation of positions of celestial bodies with application to star charts and globes; visual and photographic observations will be made using telescopes; provides student with practical observing experience.',
@@ -1094,7 +1159,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                     ),
                     padding:
-                    EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
+                        EdgeInsets.symmetric(horizontal: 20, vertical: 15)),
               ),
               SizedBox(
                 height: 150,
@@ -1105,35 +1170,36 @@ class _Scheduler2Page extends State<Scheduler2> {
                     onPressed: () {
                       setState(() {
                         _hasBeenPressed = !_hasBeenPressed;
-                        _elevatedButtonColor = Color.fromRGBO(239, 169, 58, 1.0);
+                        _elevatedButtonColor =
+                            Color.fromRGBO(239, 169, 58, 1.0);
                         _isVisible1 = !_isVisible1;
                         _isVisible2 = !_isVisible2;
                       });
-
                     },
                     child: Text(
                       'Confirm Schedule',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 25,
+                        fontSize: 20,
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromRGBO(239, 169, 58, 1.0),
                       shape: RoundedRectangleBorder(
-                        //to set border radius to button
+                          //to set border radius to button
                           borderRadius: BorderRadius.circular(25)),
-                      padding: EdgeInsets.symmetric(horizontal: 80, vertical: 20),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 110, vertical: 20),
                     ),
-                  )
-              ),
+                  )),
               Visibility(
                   visible: _isVisible2,
                   child: ElevatedButton(
                     onPressed: () {
                       setState(() {
                         _hasBeenPressed = !_hasBeenPressed;
-                        _elevatedButtonColor = Color.fromRGBO(113, 156, 145, 1.0);
+                        _elevatedButtonColor =
+                            Color.fromRGBO(113, 156, 145, 1.0);
                         _isVisible2 = !_isVisible2;
                         Navigator.push(
                           context,
@@ -1152,12 +1218,12 @@ class _Scheduler2Page extends State<Scheduler2> {
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromRGBO(37, 57, 92, 1.0),
                       shape: RoundedRectangleBorder(
-                        //to set border radius to button
+                          //to set border radius to button
                           borderRadius: BorderRadius.circular(25)),
-                      padding: EdgeInsets.symmetric(horizontal: 55, vertical: 20),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 55, vertical: 20),
                     ),
-                  )
-              ),
+                  )),
             ],
           ),
         ),
