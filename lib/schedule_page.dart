@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_final_fields, prefer_interpolation_to_compose_strings, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_final_fields, prefer_interpolation_to_compose_strings, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, non_constant_identifier_names
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -50,7 +50,7 @@ class _SchedulerPage extends State<Scheduler> {
             children: [
               TextButton(
                 onPressed: () {},
-                child: Text('1'),
+                child: Text('1/8'),
                 style: TextButton.styleFrom(
                     primary: Color.fromRGBO(37, 57, 92, 1.0),
                     backgroundColor: Colors.white,
@@ -79,11 +79,12 @@ class _SchedulerPage extends State<Scheduler> {
                 icon: Icon(Icons.more_vert),
                 onPressed: () {
                   Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Filters(selectedFunction: (List<String> List) {  }, ),
-                    )
-                  );
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Filters(
+                          selectedFunction: (List<String> List) {},
+                        ),
+                      ));
                 },
               ),
             ],
@@ -174,7 +175,7 @@ class _SchedulerPage extends State<Scheduler> {
                                 children: [
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 20, vertical: 0)),
                                   Column(
                                     children: [
                                       //Time Slot
@@ -191,13 +192,13 @@ class _SchedulerPage extends State<Scheduler> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 38, vertical: 0)),
                                   Column(
                                     children: [
                                       //Days Slot
                                       Icon(Icons.calendar_month),
                                       Text(
-                                        'M,W,F\n',
+                                        'M W F\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),
@@ -209,7 +210,7 @@ class _SchedulerPage extends State<Scheduler> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 35, vertical: 0)),
                                   Column(
                                     //Professor Slot
                                     children: [
@@ -256,9 +257,7 @@ class _SchedulerPage extends State<Scheduler> {
                               ),
                               Column(
                                 children: [
-                                  Padding(
-                                      padding:
-                                          EdgeInsets.symmetric(horizontal: 50)),
+                                  Padding(padding: EdgeInsets.all(5)),
                                   SizedBox(
                                     child: Text(
                                       'This course teached you the fundamentals of algorithm development,'
@@ -269,7 +268,7 @@ class _SchedulerPage extends State<Scheduler> {
                                         fontSize: 18,
                                       ),
                                     ),
-                                    width: 400,
+                                    width: 355,
                                   )
                                 ],
                               ),
@@ -356,7 +355,7 @@ class _SchedulerPage extends State<Scheduler> {
                                 children: [
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 15, vertical: 0)),
+                                          horizontal: 20, vertical: 0)),
                                   Column(
                                     children: [
                                       //Time Slot
@@ -365,7 +364,7 @@ class _SchedulerPage extends State<Scheduler> {
                                         '10:30am -\n11:20am',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontSize: 16,
                                         ),
                                       )
@@ -373,16 +372,16 @@ class _SchedulerPage extends State<Scheduler> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 20, vertical: 0)),
+                                          horizontal: 34, vertical: 0)),
                                   Column(
                                     children: [
                                       //Days Slot
                                       Icon(Icons.calendar_month),
                                       Text(
-                                        'M, T, W, TH\n',
+                                        'M T W TH\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -391,7 +390,7 @@ class _SchedulerPage extends State<Scheduler> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 20, vertical: 0)),
+                                          horizontal: 31, vertical: 0)),
                                   Column(
                                     //Professor Slot
                                     children: [
@@ -400,7 +399,7 @@ class _SchedulerPage extends State<Scheduler> {
                                         'Walker, Duriel\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -438,7 +437,7 @@ class _SchedulerPage extends State<Scheduler> {
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(10))),
                                       backgroundColor:
-                                      Color.fromRGBO(113, 156, 145, 1.0),
+                                          Color.fromRGBO(113, 156, 145, 1.0),
                                       padding: const EdgeInsets.symmetric(
                                           vertical: 10, horizontal: 10),
                                     ),
@@ -452,9 +451,7 @@ class _SchedulerPage extends State<Scheduler> {
                               ),
                               Column(
                                 children: [
-                                  Padding(
-                                      padding:
-                                      EdgeInsets.symmetric(horizontal: 50)),
+                                  Padding(padding: EdgeInsets.all(5)),
                                   SizedBox(
                                     child: Text(
                                       'This course teaches you Limits, derivatives, and integrals of algebraic, exponential, logarithmic, and trigonometric functions, with applications.',
@@ -463,7 +460,7 @@ class _SchedulerPage extends State<Scheduler> {
                                         fontSize: 18,
                                       ),
                                     ),
-                                    width: 400,
+                                    width: 360,
                                   )
                                 ],
                               ),
@@ -559,7 +556,7 @@ class _SchedulerPage extends State<Scheduler> {
                                         '11:30am -\n12:20pm',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontSize: 16,
                                         ),
                                       )
@@ -567,16 +564,16 @@ class _SchedulerPage extends State<Scheduler> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 34, vertical: 0)),
                                   Column(
                                     children: [
                                       //Days Slot
                                       Icon(Icons.calendar_month),
                                       Text(
-                                        'M, W, F\n',
+                                        'M W F\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -585,7 +582,7 @@ class _SchedulerPage extends State<Scheduler> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 31, vertical: 0)),
                                   Column(
                                     //Professor Slot
                                     children: [
@@ -594,7 +591,7 @@ class _SchedulerPage extends State<Scheduler> {
                                         'Smith, Mark\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -634,7 +631,7 @@ class _SchedulerPage extends State<Scheduler> {
                                 children: [
                                   Padding(
                                       padding:
-                                      EdgeInsets.symmetric(horizontal: 50)),
+                                          EdgeInsets.symmetric(horizontal: 50)),
                                   SizedBox(
                                     child: Text(
                                       'This is an introductory course in writing, largely expository, accompanied by selected readings. Emphasis on basic rhetorical methods used commonly in exposition.',
@@ -643,7 +640,7 @@ class _SchedulerPage extends State<Scheduler> {
                                         fontSize: 18,
                                       ),
                                     ),
-                                    width: 400,
+                                    width: 360,
                                   )
                                 ],
                               ),
@@ -739,7 +736,7 @@ class _SchedulerPage extends State<Scheduler> {
                                         '8:30am -\n9:20am',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontSize: 16,
                                         ),
                                       )
@@ -747,16 +744,16 @@ class _SchedulerPage extends State<Scheduler> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 35, vertical: 0)),
                                   Column(
                                     children: [
                                       //Days Slot
                                       Icon(Icons.calendar_month),
                                       Text(
-                                        'M, W, F\n',
+                                        'M W F\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -765,7 +762,7 @@ class _SchedulerPage extends State<Scheduler> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 31, vertical: 0)),
                                   Column(
                                     //Professor Slot
                                     children: [
@@ -774,7 +771,7 @@ class _SchedulerPage extends State<Scheduler> {
                                         'Anthony, Susan\n',
                                         style: TextStyle(
                                           color:
-                                          Color.fromRGBO(37, 57, 92, 1.0),
+                                              Color.fromRGBO(37, 57, 92, 1.0),
                                           fontWeight: FontWeight.bold,
                                           fontSize: 16,
                                         ),
@@ -814,7 +811,7 @@ class _SchedulerPage extends State<Scheduler> {
                                 children: [
                                   Padding(
                                       padding:
-                                      EdgeInsets.symmetric(horizontal: 50)),
+                                          EdgeInsets.symmetric(horizontal: 50)),
                                   SizedBox(
                                     child: Text(
                                       'An introduction to biological principles including scientific method, basic biochemistry, cell structure and function, metabolism, genetics, and evolution.',
@@ -823,7 +820,7 @@ class _SchedulerPage extends State<Scheduler> {
                                         fontSize: 18,
                                       ),
                                     ),
-                                    width: 400,
+                                    width: 360,
                                   )
                                 ],
                               ),
@@ -868,39 +865,40 @@ class _SchedulerPage extends State<Scheduler> {
               ),
               Visibility(
                   visible: _isVisible1,
-                child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    _hasBeenPressed = !_hasBeenPressed;
-                    _elevatedButtonColor = Color.fromRGBO(239, 169, 58, 1.0);
-                    _isVisible1 = !_isVisible1;
-                    _isVisible2 = !_isVisible2;
-                  });
-
-                },
-                child: Text(
-                  'Confirm Schedule',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                  ),
-                ),
-                style: ElevatedButton.styleFrom(
-                  primary: Color.fromRGBO(239, 169, 58, 1.0),
-                  shape: RoundedRectangleBorder(
-                      //to set border radius to button
-                      borderRadius: BorderRadius.circular(25)),
-                  padding: EdgeInsets.symmetric(horizontal: 80, vertical: 20),
-                ),
-              )
-            ),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      setState(() {
+                        _hasBeenPressed = !_hasBeenPressed;
+                        _elevatedButtonColor =
+                            Color.fromRGBO(239, 169, 58, 1.0);
+                        _isVisible1 = !_isVisible1;
+                        _isVisible2 = !_isVisible2;
+                      });
+                    },
+                    child: Text(
+                      'Confirm Schedule',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      primary: Color.fromRGBO(239, 169, 58, 1.0),
+                      shape: RoundedRectangleBorder(
+                          //to set border radius to button
+                          borderRadius: BorderRadius.circular(25)),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 110, vertical: 20),
+                    ),
+                  )),
               Visibility(
                   visible: _isVisible2,
                   child: ElevatedButton(
                     onPressed: () {
                       setState(() {
                         _hasBeenPressed = !_hasBeenPressed;
-                        _elevatedButtonColor = Color.fromRGBO(113, 156, 145, 1.0);
+                        _elevatedButtonColor =
+                            Color.fromRGBO(113, 156, 145, 1.0);
                         _isVisible2 = !_isVisible2;
                         Navigator.push(
                           context,
@@ -919,12 +917,12 @@ class _SchedulerPage extends State<Scheduler> {
                     style: ElevatedButton.styleFrom(
                       primary: Color.fromRGBO(37, 57, 92, 1.0),
                       shape: RoundedRectangleBorder(
-                        //to set border radius to button
+                          //to set border radius to button
                           borderRadius: BorderRadius.circular(25)),
-                      padding: EdgeInsets.symmetric(horizontal: 55, vertical: 20),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 55, vertical: 20),
                     ),
-                  )
-              ),
+                  )),
             ],
           ),
         ),

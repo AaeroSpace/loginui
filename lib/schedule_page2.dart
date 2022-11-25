@@ -255,13 +255,13 @@ class _Scheduler2Page extends State<Scheduler2> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 28, vertical: 0)),
+                                          horizontal: 34, vertical: 0)),
                                   Column(
                                     children: [
                                       //Days Slot
                                       Icon(Icons.calendar_month),
                                       Text(
-                                        'M,W,F\n',
+                                        'M W F\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),
@@ -273,7 +273,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 28, vertical: 0)),
+                                          horizontal: 31, vertical: 0)),
                                   Column(
                                     //Professor Slot
                                     children: [
@@ -345,7 +345,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         fontSize: 18,
                                       ),
                                     ),
-                                    width: 400,
+                                    width: 360,
                                   )
                                 ],
                               ),
@@ -449,13 +449,13 @@ class _Scheduler2Page extends State<Scheduler2> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 34, vertical: 0)),
                                   Column(
                                     children: [
                                       //Days Slot
                                       Icon(Icons.calendar_month),
                                       Text(
-                                        'M,T,W,TH\n',
+                                        'M T W TH\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),
@@ -467,7 +467,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 31, vertical: 0)),
                                   Column(
                                     //Professor Slot
                                     children: [
@@ -539,7 +539,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         fontSize: 18,
                                       ),
                                     ),
-                                    width: 400,
+                                    width: 360,
                                   )
                                 ],
                               ),
@@ -643,13 +643,13 @@ class _Scheduler2Page extends State<Scheduler2> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 34, vertical: 0)),
                                   Column(
                                     children: [
                                       //Days Slot
                                       Icon(Icons.calendar_month),
                                       Text(
-                                        'M, W, F\n',
+                                        'M W F\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),
@@ -661,7 +661,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 31, vertical: 0)),
                                   Column(
                                     //Professor Slot
                                     children: [
@@ -733,7 +733,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         fontSize: 18,
                                       ),
                                     ),
-                                    width: 400,
+                                    width: 360,
                                   )
                                 ],
                               ),
@@ -837,13 +837,13 @@ class _Scheduler2Page extends State<Scheduler2> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 34, vertical: 0)),
                                   Column(
                                     children: [
                                       //Days Slot
                                       Icon(Icons.calendar_month),
                                       Text(
-                                        'M, W, F\n',
+                                        'M W F\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),
@@ -855,7 +855,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 25, vertical: 0)),
+                                          horizontal: 31, vertical: 0)),
                                   Column(
                                     //Professor Slot
                                     children: [
@@ -927,7 +927,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         fontSize: 18,
                                       ),
                                     ),
-                                    width: 400,
+                                    width: 360,
                                   )
                                 ],
                               ),
@@ -1049,7 +1049,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 35, vertical: 0)),
+                                          horizontal: 31, vertical: 0)),
                                   Column(
                                     //Professor Slot
                                     children: [
@@ -1121,7 +1121,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                         fontSize: 18,
                                       ),
                                     ),
-                                    width: 400,
+                                    width: 360,
                                   )
                                 ],
                               ),
