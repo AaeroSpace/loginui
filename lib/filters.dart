@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, use_key_in_widget_constructors, must_be_immutable, avoid_returning_null_for_void, prefer_function_declarations_over_variables, prefer_const_literals_to_create_immutables, unused_local_variable, import_of_legacy_library_into_null_safe
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, use_key_in_widget_constructors, must_be_immutable, avoid_returning_null_for_void, prefer_function_declarations_over_variables, prefer_const_literals_to_create_immutables, unused_local_variable, import_of_legacy_library_into_null_safe, unnecessary_this, no_leading_underscores_for_local_identifiers
 
 import 'package:flutter/material.dart';
 import 'package:loginui/profile_page.dart';
@@ -23,16 +23,19 @@ class Filters extends StatefulWidget {
 }
 
 class _FiltersState extends State<Filters> {
-  List<String> selected = [];
-  List<String> selectedItemsList = [];
-  String dropdownValue = "Select";
-  String selectedText = "";
-
   bool _beenPressedMon = false;
   bool _beenPressedTue = false;
   bool _beenPressedWed = false;
   bool _beenPressedThu = false;
   bool _beenPressedFri = false;
+
+  bool _robbieC = false;
+  bool _maxJ = false;
+  bool _quinnT = false;
+  bool _ellenS = false;
+  bool _jaymeJ = false;
+  bool _nickL = false;
+  bool _durielW = false;
 
   @override
   void initState() {
@@ -277,7 +280,7 @@ class _FiltersState extends State<Filters> {
                   color: Color.fromRGBO(37, 57, 92, 1.0).withOpacity(0.4),
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 30,
                 ),
                 Text(
                   'Pick Professors You Do Not Want to Take',
@@ -289,34 +292,41 @@ class _FiltersState extends State<Filters> {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 20,
                 ),
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: DropDownMultiSelect(
-                        onChanged: (List<String> x) {
-                          setState(() {
-                            selected = x;
-                          });
-                        },
-                        options: [
-                          'Robbi Cooper',
-                          'Max Johnson',
-                          'Quinn Tommy',
-                          'Ellen Shark',
-                          'Jayme James',
-                          'Nick Lee',
-                          'Duriel Walker'
-                        ],
-                        selectedValues: selected,
-                        whenEmpty: '  List of Professors',
-                      ),
-                    ),
+                Column(
+                  children: [
+                    Wrap(
+                      spacing: 5,
+                      runSpacing: 3,
+                      children: <Widget>[
+                        filterChipWidget(
+                          chipName: 'Robbi Copper',
+                        ),
+                        filterChipWidget(
+                          chipName: 'Max Johnson',
+                        ),
+                        filterChipWidget(
+                          chipName: 'Quinn Tommy',
+                        ),
+                        filterChipWidget(
+                          chipName: 'Ellen Shark',
+                        ),
+                        filterChipWidget(
+                          chipName: 'Duriel Walker',
+                        ),
+                        filterChipWidget(
+                          chipName: 'Jayme James',
+                        ),
+                        filterChipWidget(
+                          chipName: 'Nick Lee',
+                        )
+                      ],
+                    )
                   ],
                 ),
                 SizedBox(
-                  height: 100,
+                  height: 40,
                 ),
                 Row(children: [
                   SizedBox(
@@ -391,7 +401,6 @@ class _FiltersState extends State<Filters> {
     prefs.setBool('_beenPressedWed', _beenPressedWed);
     prefs.setBool('_beenPressedThu', _beenPressedThu);
     prefs.setBool('_beenPressedFri', _beenPressedFri);
-    prefs.setStringList('selected', selected);
   }
 
   _loadFilters() async {
@@ -402,7 +411,6 @@ class _FiltersState extends State<Filters> {
       _beenPressedWed = prefs.getBool('_beenPressedWed') ?? false;
       _beenPressedThu = prefs.getBool('_beenPressedThu') ?? false;
       _beenPressedFri = prefs.getBool('_beenPressedFri') ?? false;
-      selected = prefs.getStringList('selected') ?? [];
     });
   }
 
@@ -413,6 +421,40 @@ class _FiltersState extends State<Filters> {
     prefs.setBool('_beenPressedWed', false);
     prefs.setBool('_beenPressedThu', false);
     prefs.setBool('_beenPressedFri', false);
-    prefs.setStringList('selected', []);
+  }
+}
+
+class filterChipWidget extends StatefulWidget {
+  final String chipName;
+
+  filterChipWidget({Key? key, required this.chipName}) : super(key: key);
+
+  @override
+  _filterChipWidgetState createState() => _filterChipWidgetState();
+}
+
+class _filterChipWidgetState extends State<filterChipWidget> {
+  var _isSelected = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return FilterChip(
+      label: Text(widget.chipName),
+      labelStyle: TextStyle(
+          color: Color.fromRGBO(233, 233, 233, 1.0),
+          fontSize: 20.0,
+          fontWeight: FontWeight.normal),
+      selected: _isSelected,
+      backgroundColor: Color.fromRGBO(37, 57, 93, 1.0),
+      avatar: CircleAvatar(
+          backgroundImage: AssetImage('images/Generic Guy.jpg') //NetworkImage
+          ),
+      onSelected: (isSelected) {
+        setState(() {
+          _isSelected = isSelected;
+        });
+      },
+      selectedColor: Color.fromRGBO(37, 57, 93, 50.0),
+    );
   }
 }
