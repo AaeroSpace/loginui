@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, unused_import
 
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:loginui/filters.dart';
 import 'package:loginui/login_page.dart';
 import 'package:loginui/main.dart';
@@ -62,7 +63,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 25,
+                          fontSize: 27,
                         ),
                       ),
                       onPressed: () {},
@@ -99,10 +100,16 @@ class _ProfilePageState extends State<ProfilePage> {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 25,
+                        fontSize: 27,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Scheduler()),
+                      );
+                    },
                   ),
                 ),
               ],
@@ -135,7 +142,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 25,
+                        fontSize: 27,
                       ),
                     ),
                     onPressed: () {},
@@ -149,28 +156,28 @@ class _ProfilePageState extends State<ProfilePage> {
                   SizedBox(
                     height: 70,
                   ),
-                ]),
-
+                ]
+            ),
             Column(children: [
               Center(
                 child: SizedBox(
                   height: 70,
-                  width: 335,
+                  width: 290,
                   child: Center(
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0xFFEFA93A),
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
+                            borderRadius: BorderRadius.circular(25)),
                         padding:
-                            EdgeInsets.symmetric(horizontal: 55, vertical: 15),
+                            EdgeInsets.symmetric(horizontal: 60, vertical: 10),
                       ),
                       child: Text(
                         'Go to Schedule',
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 23,
+                          fontSize: 25,
                         ),
                       ),
                       onPressed: () {
@@ -223,7 +230,6 @@ class _ProfilePageState extends State<ProfilePage> {
             ],
           ),
         ),
-        automaticallyImplyLeading: false,
         actions: [
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -244,7 +250,8 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         );
                       },
-                    )),
+                    )
+                ),
               )
             ],
           ),

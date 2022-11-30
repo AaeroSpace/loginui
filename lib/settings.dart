@@ -1,4 +1,7 @@
+// ignore_for_file: non_constant_identifier_names, unused_import, prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:loginui/Signup_Login.dart';
 import 'package:loginui/login_page.dart';
 import 'package:loginui/main.dart';
@@ -18,7 +21,7 @@ class _SettingsPageState extends State<SettingsPage> {
   String Classificationvalue = 'Freshman';
   var Classification = [
     'Freshman',
-    'Sophomore',
+    'Sophmore',
     'Junior',
     'Senior',
   ];
@@ -54,7 +57,7 @@ class _SettingsPageState extends State<SettingsPage> {
           image: DecorationImage(
               image: AssetImage('images/Background.png'), fit: BoxFit.cover)),
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(83, 37, 57, 92),
+        backgroundColor: Color.fromARGB(83, 37, 57, 92),
         body: SafeArea(
           child: Center(
             child: Column(
@@ -70,7 +73,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border:
-                          Border.all(color: const Color.fromARGB(255, 73, 101, 149)),
+                          Border.all(color: Color.fromARGB(255, 73, 101, 149)),
                       borderRadius: BorderRadius.circular(40),
                     ),
                     child: const TextField(
@@ -84,7 +87,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
                 Padding(
@@ -93,19 +96,19 @@ class _SettingsPageState extends State<SettingsPage> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border:
-                          Border.all(color: const Color.fromARGB(255, 73, 101, 149)),
+                          Border.all(color: Color.fromARGB(255, 73, 101, 149)),
                       borderRadius: BorderRadius.circular(40),
                     ),
-                    padding: const EdgeInsets.all(10.0),
+                    padding: EdgeInsets.all(10.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        const Text('Classification: '),
+                        Text('Classification: '),
                         DropdownButton(
-                          hint: const Text('Classification: '),
+                          hint: Text('Classification: '),
                           value: Classificationvalue,
-                          icon: const Icon(Icons.arrow_drop_down),
-                          iconEnabledColor: const Color.fromARGB(255, 252, 186, 3),
+                          icon: Icon(Icons.arrow_drop_down),
+                          iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
                           items: Classification.map((String items) {
                             return DropdownMenuItem(
                               value: items,
@@ -122,29 +125,29 @@ class _SettingsPageState extends State<SettingsPage> {
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Center(
                     child: Container(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         border: Border.all(
-                            color: const Color.fromARGB(255, 73, 101, 149)),
+                            color: Color.fromARGB(255, 73, 101, 149)),
                         borderRadius: BorderRadius.circular(40),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          const Text('Start Year: '),
+                          Text('Start Year: '),
                           DropdownButton(
-                            hint: const Text('Start Year: '),
+                            hint: Text('Start Year: '),
                             value: StartYearvalue,
-                            icon: const Icon(Icons.arrow_drop_down),
-                            iconEnabledColor: const Color.fromARGB(255, 252, 186, 3),
+                            icon: Icon(Icons.arrow_drop_down),
+                            iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
                             items: StartYear.map((String items) {
                               return DropdownMenuItem(
                                 value: items,
@@ -162,30 +165,29 @@ class _SettingsPageState extends State<SettingsPage> {
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
-
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Center(
                     child: Container(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         border: Border.all(
-                            color: const Color.fromARGB(255, 73, 101, 149)),
+                            color: Color.fromARGB(255, 73, 101, 149)),
                         borderRadius: BorderRadius.circular(40),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          const Text('Major: '),
+                          Text('Major: '),
                           DropdownButton(
-                            hint: const Text('Major: '),
+                            hint: Text('Major: '),
                             value: Majorvalue,
-                            icon: const Icon(Icons.arrow_drop_down),
-                            iconEnabledColor: const Color.fromARGB(255, 252, 186, 3),
+                            icon: Icon(Icons.arrow_drop_down),
+                            iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
                             items: Major.map((String items) {
                               return DropdownMenuItem(
                                 value: items,
@@ -210,22 +212,22 @@ class _SettingsPageState extends State<SettingsPage> {
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Center(
                     child: Container(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         border: Border.all(
-                            color: const Color.fromARGB(255, 73, 101, 149)),
+                            color: Color.fromARGB(255, 73, 101, 149)),
                         borderRadius: BorderRadius.circular(40),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          const Text('Concentration: '),
+                          Text('Concentration: '),
                           DropdownButton(
-                            hint: const Text('Concentration: '),
+                            hint: Text('Concentration: '),
                             value: Concentrationvalue,
-                            icon: const Icon(Icons.arrow_drop_down),
-                            iconEnabledColor: const Color.fromARGB(255, 252, 186, 3),
+                            icon: Icon(Icons.arrow_drop_down),
+                            iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
                             items: Concentration.map((String items) {
                               return DropdownMenuItem(
                                 value: items,
@@ -243,10 +245,9 @@ class _SettingsPageState extends State<SettingsPage> {
                     ),
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
-
                 SizedBox(
                   height: 40,
                   width: 180,
@@ -254,7 +255,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25)),
-                      backgroundColor: const Color(0xFFEFA93A),
+                      backgroundColor: Color(0xFFEFA93A),
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 7),
                     ),
@@ -275,7 +276,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     },
                   ),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 20,
                 ),
                 SizedBox(
@@ -285,7 +286,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25)),
-                      backgroundColor: const Color(0xFFEFA93A),
+                      backgroundColor: Color(0xFFEFA93A),
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 7),
                     ),
@@ -314,24 +315,24 @@ class _SettingsPageState extends State<SettingsPage> {
             // ignore: prefer_const_literals_to_create_immutables
             toolbarHeight: 120,
             elevation: 0.0,
-            backgroundColor: const Color.fromARGB(0, 254, 253, 253),
+            backgroundColor: Color.fromARGB(0, 254, 253, 253),
             automaticallyImplyLeading: false,
             title: Row(children: [
               Column(
                 children: const [
                   SizedBox(
                     height: 15,
-                  ),
+                  )
                 ],
               ),
               Column(children: [
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
                 Container(
                   height: 100.0,
                   width: 100.0,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       image: DecorationImage(
                           image: AssetImage("images/mike.jpg"),
@@ -343,12 +344,13 @@ class _SettingsPageState extends State<SettingsPage> {
                   width: 30,
                 ),
               ]),
-              Column(children: const [
+              // ignore: prefer_const_literals_to_create_immutables
+              Column(children: [
                 SizedBox(
                   height: 10,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(right: 20.0),
+                  padding: const EdgeInsets.only(right: 20.0),
                   child: Text(
                     'Profile Settings',
                     style: TextStyle(
