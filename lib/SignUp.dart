@@ -14,8 +14,8 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-  TextEditingController controller1 = new TextEditingController();
-  TextEditingController controller2 = new TextEditingController();
+  TextEditingController controller1 = TextEditingController();
+  TextEditingController controller2 = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -212,7 +212,6 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                   TextButton(
-                    child: Text('Log In'),
                     style: TextButton.styleFrom(
                       primary: Color.fromRGBO(113, 156, 145, 1.0),
                     ),
@@ -223,6 +222,7 @@ class _SignUpState extends State<SignUp> {
                             builder: (context) => const LoginPage()),
                       );
                     },
+                    child: Text('Log In'),
                   )
                 ],
               ),

@@ -30,7 +30,7 @@ class _SignupLoginState extends State<SignupLogin> {
                   return LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    colors: [Colors.black, Colors.transparent],
+                    colors: const [Colors.black, Colors.transparent],
                   ).createShader(Rect.fromLTRB(0, 0, rect.width, rect.height));
                 },
                 blendMode: BlendMode.dstIn,

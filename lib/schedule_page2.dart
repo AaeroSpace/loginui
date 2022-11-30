@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_final_fields, prefer_interpolation_to_compose_strings, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
-// ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_final_fields, prefer_interpolation_to_compose_strings, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:loginui/Fall22done.dart';
 import 'package:loginui/filters.dart';
@@ -47,7 +45,6 @@ class _Scheduler2Page extends State<Scheduler2> {
         ),
         title: Container(
           child: Column(
-            // ignore: prefer_const_literals_to_create_immutables
             children: [
               TextButton(
                 onPressed: () {
@@ -279,7 +276,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                     children: [
                                       Icon(Icons.account_circle_outlined),
                                       Text(
-                                        'Cooper, Robbie\n',
+                                        'Cooper, R\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),
@@ -473,7 +470,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                     children: [
                                       Icon(Icons.account_circle_outlined),
                                       Text(
-                                        'White, Pearl\n',
+                                        'White, P\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),
@@ -667,7 +664,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                     children: [
                                       Icon(Icons.account_circle_outlined),
                                       Text(
-                                        'Jones, Tanya\n',
+                                        'Jones, T\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),
@@ -861,7 +858,7 @@ class _Scheduler2Page extends State<Scheduler2> {
                                     children: [
                                       Icon(Icons.account_circle_outlined),
                                       Text(
-                                        'Jackson, Mike\n',
+                                        'Jackson, M\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),
@@ -1049,13 +1046,13 @@ class _Scheduler2Page extends State<Scheduler2> {
                                   ),
                                   Padding(
                                       padding: EdgeInsets.symmetric(
-                                          horizontal: 31, vertical: 0)),
+                                          horizontal: 35, vertical: 0)),
                                   Column(
                                     //Professor Slot
                                     children: [
                                       Icon(Icons.account_circle_outlined),
                                       Text(
-                                        'Jackson, Mike\n',
+                                        'Jackson, M\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:loginui/main.dart';
 import 'package:loginui/schedule_page.dart';
 import 'package:loginui/filters.dart';
+import 'package:loginui/schedule_page2.dart';
 
 import 'profile_page.dart';
 
@@ -16,9 +17,6 @@ class Fall22 extends StatefulWidget {
 
 class _Fall22Page extends State<Fall22> {
   Color _elevatedButtonColor = Color.fromRGBO(113, 156, 145, 1.0);
-  bool _hasBeenPressed = false;
-  bool _isVisible1 = true;
-  bool _isVisible2 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +42,74 @@ class _Fall22Page extends State<Fall22> {
             // ignore: prefer_const_literals_to_create_immutables
             children: [
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      backgroundColor: Color.fromRGBO(233, 233, 233, 1.0),
+                      title: Center(child: Text('View Semesters')),
+                      actions: [
+                        TextButton(
+                          child: Text(
+                            '1',
+                            style: TextStyle(
+                              color: Color.fromRGBO(37, 57, 92, 1.0),
+                              fontSize: 40,
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Fall22()),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            side: BorderSide(
+                                width: 3,
+                                color: Color.fromRGBO(37, 57, 92, 1.0)),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 60,
+                          height: 80,
+                        ),
+                        TextButton(
+                          child: Text(
+                            '2',
+                            style: TextStyle(
+                              color: Color.fromRGBO(37, 57, 92, 1.0),
+                              fontSize: 40,
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Scheduler2()),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            side: BorderSide(
+                                width: 3,
+                                color: Color.fromRGBO(37, 57, 92, 1.0)),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                      ],
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                    ),
+                  );
+                },
                 child: Text('1/8'),
                 style: TextButton.styleFrom(
                     primary: Color.fromRGBO(37, 57, 92, 1.0),
@@ -135,7 +200,7 @@ class _Fall22Page extends State<Fall22> {
                       return Container(
                         height: 500,
                         decoration: BoxDecoration(
-                            color: _elevatedButtonColor,
+                            color: Color.fromRGBO(233, 233, 233, 1.0),
                             borderRadius: const BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20))),
@@ -172,7 +237,7 @@ class _Fall22Page extends State<Fall22> {
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 25, vertical: 0)),
                                   Column(
-                                    children: [
+                                    children: const [
                                       //Time Slot
                                       Icon(Icons.access_time_filled),
                                       Text(
@@ -189,7 +254,7 @@ class _Fall22Page extends State<Fall22> {
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 25, vertical: 0)),
                                   Column(
-                                    children: [
+                                    children: const [
                                       //Days Slot
                                       Icon(Icons.calendar_month),
                                       Text(
@@ -208,7 +273,7 @@ class _Fall22Page extends State<Fall22> {
                                           horizontal: 25, vertical: 0)),
                                   Column(
                                     //Professor Slot
-                                    children: [
+                                    children: const [
                                       Icon(Icons.account_circle_outlined),
                                       Text(
                                         'Skark, E\n',
@@ -229,7 +294,7 @@ class _Fall22Page extends State<Fall22> {
                                 color: Color.fromARGB(112, 187, 187, 187),
                               ),
                               Row(
-                                children: [
+                                children: const [
                                   Padding(
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 5, vertical: 0)),
@@ -251,7 +316,7 @@ class _Fall22Page extends State<Fall22> {
                                 color: Color.fromARGB(112, 187, 187, 187),
                               ),
                               Column(
-                                children: [
+                                children: const [
                                   Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 50)),
@@ -354,7 +419,7 @@ class _Fall22Page extends State<Fall22> {
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 15, vertical: 0)),
                                   Column(
-                                    children: [
+                                    children: const [
                                       //Time Slot
                                       Icon(Icons.access_time_filled),
                                       Text(
@@ -371,7 +436,7 @@ class _Fall22Page extends State<Fall22> {
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 20, vertical: 0)),
                                   Column(
-                                    children: [
+                                    children: const [
                                       //Days Slot
                                       Icon(Icons.calendar_month),
                                       Text(
@@ -390,7 +455,7 @@ class _Fall22Page extends State<Fall22> {
                                           horizontal: 20, vertical: 0)),
                                   Column(
                                     //Professor Slot
-                                    children: [
+                                    children: const [
                                       Icon(Icons.account_circle_outlined),
                                       Text(
                                         'Walker, Duriel\n',
@@ -447,7 +512,7 @@ class _Fall22Page extends State<Fall22> {
                                 color: Color.fromARGB(112, 187, 187, 187),
                               ),
                               Column(
-                                children: [
+                                children: const [
                                   Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 50)),
@@ -548,7 +613,7 @@ class _Fall22Page extends State<Fall22> {
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 20, vertical: 0)),
                                   Column(
-                                    children: [
+                                    children: const [
                                       //Time Slot
                                       Icon(Icons.access_time_filled),
                                       Text(
@@ -565,7 +630,7 @@ class _Fall22Page extends State<Fall22> {
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 25, vertical: 0)),
                                   Column(
-                                    children: [
+                                    children: const [
                                       //Days Slot
                                       Icon(Icons.calendar_month),
                                       Text(
@@ -584,7 +649,7 @@ class _Fall22Page extends State<Fall22> {
                                           horizontal: 25, vertical: 0)),
                                   Column(
                                     //Professor Slot
-                                    children: [
+                                    children: const [
                                       Icon(Icons.account_circle_outlined),
                                       Text(
                                         'Smith, Mark\n',
@@ -605,7 +670,7 @@ class _Fall22Page extends State<Fall22> {
                                 color: Color.fromARGB(112, 187, 187, 187),
                               ),
                               Row(
-                                children: [
+                                children: const [
                                   Padding(
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 5, vertical: 0)),
@@ -627,7 +692,7 @@ class _Fall22Page extends State<Fall22> {
                                 color: Color.fromARGB(112, 187, 187, 187),
                               ),
                               Column(
-                                children: [
+                                children: const [
                                   Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 50)),
@@ -728,7 +793,7 @@ class _Fall22Page extends State<Fall22> {
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 20, vertical: 0)),
                                   Column(
-                                    children: [
+                                    children: const [
                                       //Time Slot
                                       Icon(Icons.access_time_filled),
                                       Text(
@@ -745,7 +810,7 @@ class _Fall22Page extends State<Fall22> {
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 25, vertical: 0)),
                                   Column(
-                                    children: [
+                                    children: const [
                                       //Days Slot
                                       Icon(Icons.calendar_month),
                                       Text(
@@ -764,7 +829,7 @@ class _Fall22Page extends State<Fall22> {
                                           horizontal: 25, vertical: 0)),
                                   Column(
                                     //Professor Slot
-                                    children: [
+                                    children: const [
                                       Icon(Icons.account_circle_outlined),
                                       Text(
                                         'Anthony, Susan\n',
@@ -785,7 +850,7 @@ class _Fall22Page extends State<Fall22> {
                                 color: Color.fromARGB(112, 187, 187, 187),
                               ),
                               Row(
-                                children: [
+                                children: const [
                                   Padding(
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 5, vertical: 0)),
@@ -807,7 +872,7 @@ class _Fall22Page extends State<Fall22> {
                                 color: Color.fromARGB(112, 187, 187, 187),
                               ),
                               Column(
-                                children: [
+                                children: const [
                                   Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 50)),

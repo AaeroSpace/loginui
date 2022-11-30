@@ -13,8 +13,8 @@ class ForgotPassword2 extends StatefulWidget {
 }
 
 class _ForgotPassword2State extends State<ForgotPassword2> {
-  TextEditingController emailController = new TextEditingController();
-  TextEditingController passwordController = new TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
 
 
   @override

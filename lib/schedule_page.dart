@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last, prefer_final_fields, prefer_interpolation_to_compose_strings, avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, non_constant_identifier_names
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:loginui/Fall22done.dart';
 import 'package:loginui/filters.dart';
@@ -46,7 +45,6 @@ class _SchedulerPage extends State<Scheduler> {
         ),
         title: Container(
           child: Column(
-            // ignore: prefer_const_literals_to_create_immutables
             children: [
               TextButton(
                 onPressed: () {},
@@ -260,7 +258,7 @@ class _SchedulerPage extends State<Scheduler> {
                                   Padding(padding: EdgeInsets.all(5)),
                                   SizedBox(
                                     child: Text(
-                                      'This course teached you the fundamentals of algorithm development,'
+                                      'This course teaches you the fundamentals of algorithm development,'
                                       ' program design and structured programming using an object-oriented'
                                       ' language.',
                                       style: TextStyle(
@@ -396,7 +394,7 @@ class _SchedulerPage extends State<Scheduler> {
                                     children: [
                                       Icon(Icons.account_circle_outlined),
                                       Text(
-                                        'Walker, Duriel\n',
+                                        'Walker, D\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),
@@ -588,7 +586,7 @@ class _SchedulerPage extends State<Scheduler> {
                                     children: [
                                       Icon(Icons.account_circle_outlined),
                                       Text(
-                                        'Smith, Mark\n',
+                                        'Smith, M\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),
@@ -768,7 +766,7 @@ class _SchedulerPage extends State<Scheduler> {
                                     children: [
                                       Icon(Icons.account_circle_outlined),
                                       Text(
-                                        'Anthony, Susan\n',
+                                        'Anthony, S\n',
                                         style: TextStyle(
                                           color:
                                               Color.fromRGBO(37, 57, 92, 1.0),

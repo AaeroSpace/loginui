@@ -15,7 +15,7 @@ class _Aboutme extends State<Aboutme> {
   String Classificationvalue = 'Freshman';
   var Classification = [
     'Freshman',
-    'Sophmore',
+    'Sophomore',
     'Junior',
     'Senior',
   ];
@@ -51,24 +51,23 @@ class _Aboutme extends State<Aboutme> {
           image: DecorationImage(
               image: AssetImage('images/Background.png'), fit: BoxFit.cover)),
       child: Scaffold(
-        backgroundColor: Color.fromARGB(83, 37, 57, 92),
+        backgroundColor: const Color.fromARGB(83, 37, 57, 92),
         body: SafeArea(
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               // ignore: prefer_const_literals_to_create_immutables
               children: [
-                //Image.asset('images/Advisiored (7).png'),
                 Title(
-                    child: Text('Profile Settings',
+                    color: Colors.white,
+                    child: const Text('Profile Settings',
                         style: TextStyle(
                             fontFamily: 'Fira Sans Condensed',
                             fontSize: 24.0,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold)),
-                    color: Colors.white),
+                            fontWeight: FontWeight.bold))),
 
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Padding(
@@ -77,10 +76,10 @@ class _Aboutme extends State<Aboutme> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border:
-                          Border.all(color: Color.fromARGB(255, 73, 101, 149)),
+                          Border.all(color: const Color.fromARGB(255, 73, 101, 149)),
                       borderRadius: BorderRadius.circular(40),
                     ),
-                    child: TextField(
+                    child: const TextField(
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'University',
@@ -91,7 +90,7 @@ class _Aboutme extends State<Aboutme> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Padding(
@@ -100,19 +99,19 @@ class _Aboutme extends State<Aboutme> {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border:
-                          Border.all(color: Color.fromARGB(255, 73, 101, 149)),
+                          Border.all(color: const Color.fromARGB(255, 73, 101, 149)),
                       borderRadius: BorderRadius.circular(40),
                     ),
-                    padding: EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text('Classification: '),
+                        const Text('Classification: '),
                         DropdownButton(
-                          hint: Text('Classification: '),
+                          hint: const Text('Classification: '),
                           value: Classificationvalue,
-                          icon: Icon(Icons.arrow_drop_down),
-                          iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
+                          icon: const Icon(Icons.arrow_drop_down),
+                          iconEnabledColor: const Color.fromARGB(255, 252, 186, 3),
                           items: Classification.map((String items) {
                             return DropdownMenuItem(
                               value: items,
@@ -129,7 +128,7 @@ class _Aboutme extends State<Aboutme> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
 
@@ -137,22 +136,22 @@ class _Aboutme extends State<Aboutme> {
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Center(
                     child: Container(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         border: Border.all(
-                            color: Color.fromARGB(255, 73, 101, 149)),
+                            color: const Color.fromARGB(255, 73, 101, 149)),
                         borderRadius: BorderRadius.circular(40),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Text('Start Year: '),
+                          const Text('Start Year: '),
                           DropdownButton(
-                            hint: Text('Start Year: '),
+                            hint: const Text('Start Year: '),
                             value: StartYearvalue,
-                            icon: Icon(Icons.arrow_drop_down),
-                            iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
+                            icon: const Icon(Icons.arrow_drop_down),
+                            iconEnabledColor: const Color.fromARGB(255, 252, 186, 3),
                             items: StartYear.map((String items) {
                               return DropdownMenuItem(
                                 value: items,
@@ -170,7 +169,7 @@ class _Aboutme extends State<Aboutme> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
 
@@ -178,22 +177,22 @@ class _Aboutme extends State<Aboutme> {
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Center(
                     child: Container(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         border: Border.all(
-                            color: Color.fromARGB(255, 73, 101, 149)),
+                            color: const Color.fromARGB(255, 73, 101, 149)),
                         borderRadius: BorderRadius.circular(40),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Text('Major: '),
+                          const Text('Major: '),
                           DropdownButton(
-                            hint: Text('Major: '),
+                            hint: const Text('Major: '),
                             value: Majorvalue,
-                            icon: Icon(Icons.arrow_drop_down),
-                            iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
+                            icon: const Icon(Icons.arrow_drop_down),
+                            iconEnabledColor: const Color.fromARGB(255, 252, 186, 3),
                             items: Major.map((String items) {
                               return DropdownMenuItem(
                                 value: items,
@@ -211,56 +210,29 @@ class _Aboutme extends State<Aboutme> {
                     ),
                   ),
                 ),
-                //  Row(
-                //   mainAxisAlignment: MainAxisAlignment.center,
-                //   // ignore: prefer_const_literals_to_create_immutables
-                //   children: [
-                //     Text(
-                //       "Don't have an Account?",
-                //       style: TextStyle(
-                //         color: Colors.white,
-                //         fontWeight: FontWeight.bold,
-                //         fontSize: 15,
-                //       ),
-                //     ),
-                //     TextButton(
-                //       child: Text('Sign Up'),
-                //       style: TextButton.styleFrom(
-                //         primary: Color.fromRGBO(113, 156, 145, 1.0),
-                //       ),
-                //       onPressed: () {
-                //         Navigator.push(
-                //           context,
-                //           MaterialPageRoute(
-                //               builder: (context) => const SignUp()),
-                //         );
-                //       },
-                //     )
-                //   ],
-                // ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: Center(
                     child: Container(
-                      padding: EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.all(10.0),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         border: Border.all(
-                            color: Color.fromARGB(255, 73, 101, 149)),
+                            color: const Color.fromARGB(255, 73, 101, 149)),
                         borderRadius: BorderRadius.circular(40),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          Text('Concentration: '),
+                          const Text('Concentration: '),
                           DropdownButton(
-                            hint: Text('Concentration: '),
+                            hint: const Text('Concentration: '),
                             value: Concentrationvalue,
-                            icon: Icon(Icons.arrow_drop_down),
-                            iconEnabledColor: Color.fromARGB(255, 252, 186, 3),
+                            icon: const Icon(Icons.arrow_drop_down),
+                            iconEnabledColor: const Color.fromARGB(255, 252, 186, 3),
                             items: Concentration.map((String items) {
                               return DropdownMenuItem(
                                 value: items,
@@ -278,7 +250,7 @@ class _Aboutme extends State<Aboutme> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
 
@@ -288,7 +260,7 @@ class _Aboutme extends State<Aboutme> {
                     style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25)),
-                      backgroundColor: Color(0xFFEFA93A),
+                      backgroundColor: const Color(0xFFEFA93A),
                       padding: const EdgeInsets.symmetric(
                           horizontal: 80, vertical: 12),
                     ),
