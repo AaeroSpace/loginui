@@ -1,6 +1,6 @@
-# logInUI
+# Advising Application
 
-A new Flutter project.
+This is an class made project for incoming and onging students at any unversity. This application was made for the college of computer science and the course listed are to help studnets maximize their school time. 
 
 ## Getting Started
 
